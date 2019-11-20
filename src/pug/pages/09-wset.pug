@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Академия вина'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.wset
+      include ../sections/wset-top
+      include ../sections/wset-items
+      include ../sections/wset-about
+      include ../sections/wset-advantages
+      include ../sections/wset-know
+      include ../sections/teachers-slider
+      include ../sections/wset-events
+
+      include ../sections/course-tab-sec
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

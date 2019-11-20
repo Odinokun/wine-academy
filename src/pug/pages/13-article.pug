@@ -1,0 +1,123 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'В ГД внесли законопроект, разрешающий рекламу в СМИ вина из стран ЕАЭС'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.article
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark
+          |В ГД внесли законопроект,
+          br
+          |разрешающий рекламу в СМИ вина из стран ЕАЭС
+
+        //begin article__subtitle
+        .article__subtitle.article-subtitle
+          span.article-subtitle__tag Название раздела
+
+          .article-subtitle__author
+            span.article-subtitle__author-text Автор:
+            span.article-subtitle__author-name Смирнов Александр
+
+          .article-subtitle__date
+            +svg('calendar')
+            span 12 декабря 2018
+        //end article__subtitle
+
+        //begin article__wrap
+        .article__wrap
+          //begin articles__main
+          .article__main.article-main
+
+            .article-main__row
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+            .article-main__row
+              .article-main__img
+                img(src="assets/img/article-top.jpg" alt="picture")
+              h2.article-main__title-2 Подзаголовок
+              p
+                | Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина, произведенного в Евразийском
+                =' '
+                a(href="#") экономическом союзе
+                =' '
+                |(ЕАЭС), следует из электронной базы нижней палаты парламента.
+              p Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина, произведенного в Евразийском экономическом союзе (ЕАЭС), следует из электронной базы нижней палаты парламента. Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина.
+
+            .article-main__row
+              p
+                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                =' '
+                a(href="#") natoque penatibus
+                =' '
+                |et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+              h3.article-main__title-3 Подзаголовок третьего уровня
+
+              p Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина, произведенного в Евразийском экономическом союзе (ЕАЭС), следует из электронной базы нижней палаты парламента.
+              p
+                strong Интенсивный курс длится 5 дней (понедельник - пятница), в последний день - экзамен. Язык преподавания - английский. Регистрация на курсы заканчивается 10 января 2017 г.
+
+              ul.article-main__ul
+                li Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина
+                li Произведенного в Евразийском экономическом союзе (ЕАЭС), следует из электронной базы нижней палаты парламента.
+                li Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина.
+
+            .article-main__row
+              blockquote.article-main__blockquote Несколько слов о себе. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+            .article-main__row
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+              h3.article-main__title-3 Подзаголовок третьего уровня
+              p Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина, произведенного в Евразийском экономическом союзе (ЕАЭС), следует из электронной базы нижней палаты парламента.
+
+              p
+                strong Интенсивный курс длится 5 дней (понедельник - пятница), в последний день - экзамен. Язык преподавания - английский. Регистрация на курсы заканчивается 10 января 2017 г.
+
+              ol.article-main__ol
+                li Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина
+                li Произведенного в Евразийском экономическом союзе (ЕАЭС), следует из электронной базы нижней палаты парламента.
+                li Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина.
+
+            .article-main__row
+              .article-main__table
+                .article-main__table-row
+                  .article-main__table-item Стаж работы:
+                  .article-main__table-item 15 лет
+                .article-main__table-row
+                  .article-main__table-item Профессиональное увлечение:
+                  .article-main__table-item винный туризм в страны Старого света
+
+            .article-main__row
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+            .article-main__row
+              .article-main__socials
+                a(href="#").article-main__social
+                  img(src="assets/img/social-01.png" alt="picture")
+                a(href="#").article-main__social
+                  img(src="assets/img/social-02.png" alt="picture")
+                a(href="#").article-main__social
+                  img(src="assets/img/social-03.png" alt="picture")
+                a(href="#").article-main__social
+                  img(src="assets/img/social-04.png" alt="picture")
+                a(href="#").article-main__social
+                  img(src="assets/img/social-05.png" alt="picture")
+          //end article__main
+
+          include ../sections/article-aside
+        //end article__wrap
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

@@ -1,0 +1,141 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Академия вина'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.catalog
+      include ../sections/catalog-top
+      .container
+        h1.page-title.page-title--dark Частные мероприятия
+
+      .container
+        //begin catalog-wrap
+        .catalog-wrap
+          include ../sections/catalog-filter
+
+          //begin catalog-list
+          .catalog-list
+            //begin catalog-list__header
+            form.catalog-list__header
+              .catalog-list__sort
+                span.catalog-list__sort-lable Сортировать по
+                select.catalog-list__select.select-ui
+                  option Дате
+                  option Времени дня
+                  option Цене
+                  option Уровню
+                  option Месту
+                  option Тегам
+              .catalog-list__view
+                a(href="#").catalog-list__view-link.catalog-list__view-link--line
+                  svg(xmlns='http://www.w3.org/2000/svg', width='30', height='26', viewBox='0 0 30 26')
+                    defs
+                      clippath#308ga
+                        path(fill='#fff', d='M0 12h30v2H0z')
+                      clippath#308gb
+                        path(fill='#fff', d='M0 0h30v2H0z')
+                      clippath#308gc
+                        path(fill='#fff', d='M0 24h30v2H0z')
+                    g
+                      g
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='10', d='M0 12v0h30v2H0v0z', clip-path='url("#308ga")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='10', d='M0 0v0h30v2H0v0z', clip-path='url("#308gb")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='10', d='M0 24v0h30v2H0v0z', clip-path='url("#308gc")')
+
+                a(href="#").catalog-list__view-link.catalog-list__view-link--square.active
+                  svg(xmlns='http://www.w3.org/2000/svg', width='30', height='30', viewBox='0 0 30 30')
+                    defs
+                      clippath#vteba
+                        path(fill='#fff', d='M4 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebb
+                        path(fill='#fff', d='M15 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebc
+                        path(fill='#fff', d='M26 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebd
+                        path(fill='#fff', d='M4 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebe
+                        path(fill='#fff', d='M15 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebf
+                        path(fill='#fff', d='M26 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebg
+                        path(fill='#fff', d='M4 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebh
+                        path(fill='#fff', d='M15 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                      clippath#vtebi
+                        path(fill='#fff', d='M26 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z')
+                    g
+                      g
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M4 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vteba")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M15 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebb")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M26 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebc")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M4 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebd")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M15 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebe")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M26 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebf")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M4 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebg")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M15 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebh")')
+                        g
+                          path(fill='none', stroke='', stroke-miterlimit='50', stroke-width='4', d='M26 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z', clip-path='url("#vtebi")')
+
+            //end catalog-list__header
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-10
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-09
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-11
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-12
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-13
+            .catalog-list__certificate
+              include ../elements/banner
+
+            //begin catalog-banner
+            .catalog-banner-wrap
+              a(class='catalog-banner' href="#" style="background-image:url('assets/img/catalog-banner.jpg')")
+                .catalog-banner__text
+                  h3.catalog-banner__title Дегустации FRIENDS
+                  span водные тематические лекции - дегустации вин и других алкогольных напитков для начинающих серии "Friends" ("Друзья").
+                  span Приглашаем новых друзей - тех, кто желает познакомиться с искусством дегустации. Данные дегустации ориентированы, в первую очередь, на тех, кто только начинает свое знакомство с миром виноградных напитков.
+                .index-banners__item-arr
+                  +svg('nav-arr-right')
+
+            //end catalog-banner
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-16
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-17
+            .catalog-list__certificate
+              include ../elements/certificates/certificate-18
+
+            include ../elements/pagination
+          //end catalog-list
+        //end catalog-wrap
+
+        .catalog__bottom-text
+          p Винная академия - сообщество, в котором все желающие могут приобщиться к миру винодельческих традиций разных стран. Вы можете обмениваться сообщениями и делиться фотографиями, следить за новостями Ваших друзей и групп сообщества единомышленников. Образовательная площадка «Академии вина» позволяет получить обширные знания о винах и виноделии как профессионалам, так и всем лицам, интересующимся этой сферой.
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts

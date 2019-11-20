@@ -1,0 +1,105 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Преподаватели'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.lk
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Личный кабинет
+      .container
+        //begin lk-main
+        .lk-main
+          include ../elements/lk-aside
+
+          //begin lk-body
+          .lk-body
+            //begin lk-order
+            .lk-order
+              //begin lk-order__header
+              .lk-order__header
+                h2.lk-order__title
+                  span Заказ #0001
+                  =' '
+                  span от
+                  =' '
+                  span 01.01.2019
+                .lk-order__btns
+                  a(class="lk-order__btn-back btn btn--violet" href="#")
+                    +svg('nav-arr-left')
+                    span назад к списку заказов
+              //end lk-order__header
+
+              //begin lk-order__body
+              .lk-order__body
+                //begin lk-order__table
+                .lk-order__table
+                  .lk-order__table-row.lk-order__table-row--header
+                    .lk-order__table-td.lk-order__table-td--event
+                      span Мероприятие
+                    .lk-order__table-td.lk-order__table-td--review
+                      span
+                    .lk-order__table-td.lk-order__table-td--tickets
+                      span Кол-во билетов
+                    .lk-order__table-td.lk-order__table-td--sum
+                      span Сумма
+
+                  .lk-order__table-row
+                    .lk-order__table-td.lk-order__table-td--event
+                      span.lk-order__table-td-event Лекция-дегустация на тему: Согревающие вина
+                      span.lk-order__table-td-date 12 декабря 19:00-23:00
+                    .lk-order__table-td.lk-order__table-td--review
+                      a(href="#").btn.btn--yellow оставить отзыв
+                    .lk-order__table-td.lk-order__table-td--tickets
+                      span 4 билета
+                      =' '
+                      span х
+                      =' '
+                      span 2 500
+                      span.rub a
+                    .lk-order__table-td.lk-order__table-td--sum
+                      span 10 000
+                      span.rub a
+
+                  .lk-order__table-row
+                    .lk-order__table-td.lk-order__table-td--event
+                      span.lk-order__table-td-event Лекция-дегустация на тему: Согревающие вина солнечной Испании длинное название
+                      span.lk-order__table-td-date 12 декабря 19:00-23:00
+                    .lk-order__table-td.lk-order__table-td--review
+                      a(href="#").btn.btn--yellow оставить отзыв
+                    .lk-order__table-td.lk-order__table-td--tickets
+                      span 1 билет
+                      span х
+                      span 1 300
+                      span.rub a
+                    .lk-order__table-td.lk-order__table-td--sum
+                      span 1 300
+                      span.rub a
+
+                  .lk-order__table-row.lk-order__table-row--footer
+                    .lk-order__table-td
+                      span Итого:
+                      span 13 000
+                      span.rub c
+
+                //end lk-order__table
+              //end lk-order__body
+            //end lk-order
+          //end lk-body
+        //end lk-main
+
+      .container
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

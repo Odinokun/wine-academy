@@ -1,0 +1,158 @@
+.certificate-page {
+  .page-title {
+    line-height: 1.33;
+    max-width: 650px;
+    margin: 0 auto 57px auto;
+
+    @include max(580) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.certificate-slider {
+  overflow: hidden;
+  max-width: 1770px;
+  margin: 0 auto;
+  .container {
+    &::before {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: calc(100% - 30px);
+      bottom: 0;
+      width: 100vw;
+      content: '';
+      background-color: #f7f7f7;
+
+      @include max(1023) {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: calc(100% - 30px);
+      width: 100vw;
+      content: '';
+      opacity: .6;
+      background-color: #fff;
+
+      @include max(1023) {
+        display: none;
+      }
+    }
+  }
+}
+
+.certificate-slider__list {
+  width: calc(100% + 30px);
+  margin-bottom: 55px;
+  margin-left: -15px;
+
+  @include max(1023) {
+    margin-bottom: 80px;
+  }
+
+  .slick-list {
+    overflow: visible;
+
+    @include max(1023) {
+      overflow: hidden;
+    }
+  }
+  .slick-track {
+    display: flex;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 15;
+    top: 212px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 50%;
+    background-color: #ffd65a;
+
+    &:hover {
+      background-color: #ffe289;
+    }
+    svg {
+      z-index: 1;
+      fill: #1e1e1e;
+      width: 16px;
+      height: 10px;
+    }
+  }
+  .prev {
+    left: -167px;
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+
+    @include max(1570) {
+      left: -2px;
+    }
+
+    &.active {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  .next {
+    right: -167px;
+
+    @include max(1570) {
+      right: -2px;
+    }
+  }
+
+  .certificate {
+    height: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.certificate-slider__all-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 125px;
+
+  @include max(1023) {
+    margin-bottom: 80px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 400;
+    color: $brand;
+  }
+  svg {
+    flex: none;
+    fill: $brand;
+    width: 5px;
+    height: 10px;
+    margin-left: 20px;
+  }
+}

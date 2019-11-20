@@ -1,0 +1,30 @@
+.index-about {
+  padding-top: 75px;
+  background-color: #f5f5f5;
+  .page-title {
+    margin-bottom: 50px;
+  }
+  .certificate-slider__all-link {
+    margin-bottom: 80px;
+  }
+}
+
+.index-about__text {
+  padding-bottom: 50px;
+
+  column-count: 2;
+  column-gap: 30px;
+  @include max(767) {
+    column-count: 1;
+    column-gap: 0;
+  }
+  p {
+    font-family: $opensans;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #969696;
+  }
+}

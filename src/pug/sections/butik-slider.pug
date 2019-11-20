@@ -1,0 +1,17 @@
+mixin butik-slider__slide(img, title, descr)
+  .butik-slider__slide(style='background-image:url("assets/img/butik-slide-'+ img + '.jpg")')
+    .container
+      h2.page-title.page-title--light #{title}
+      span.butik-slider__descr #{descr}
+
+//begin butik-slider
+.butik-slider
+  .butik-slider__list
+    +butik-slider__slide('01', 'Sangiovese Club', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ')
+    +butik-slider__slide('01', 'Sangiovese Club 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ')
+    +butik-slider__slide('01', 'Sangiovese Club 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ')
+
+  .butik-slider__breadcrumbs
+    .container
+      include ../elements/breadcrumbs--light
+//end butik-slider

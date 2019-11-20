@@ -1,0 +1,46 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Преподаватели'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.teachers
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark #{pageTitle}
+        span.teachers__subtitle Винная академия - сообщество, в котором все желающие могут приобщиться к миру винодельческих традиций разных стран. Вы можете обмениваться сообщениями и делиться фотографиями, следить за новостями Ваших друзей и групп сообщества единомышленников. Образовательная площадка «Академии вина» позволяет получить обширные знания о винах и виноделии как профессионалам, так и всем лицам, интересующимся этой сферой.
+
+      .container
+        .certificates__filter-btns
+          include ../elements/filter-btns/filter-btns-02
+
+        //begin filter-list
+        .teacher-cards__filter-list.filter-list
+          include ../elements/teacher-cards/teacher-card-01
+          include ../elements/teacher-cards/teacher-card-02
+          include ../elements/teacher-cards/teacher-card-03
+          include ../elements/teacher-cards/teacher-card-04
+          include ../elements/teacher-cards/teacher-card-01
+          include ../elements/teacher-cards/teacher-card-02
+          include ../elements/teacher-cards/teacher-card-03
+          include ../elements/teacher-cards/teacher-card-04
+          include ../elements/teacher-cards/teacher-card-01
+          include ../elements/teacher-cards/teacher-card-02
+          include ../elements/teacher-cards/teacher-card-03
+          include ../elements/teacher-cards/teacher-card-04
+        //end filter-list
+
+        include ../elements/pagination
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

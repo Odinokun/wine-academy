@@ -1,0 +1,61 @@
+.popup-slider {
+  width: 95%;
+  max-width: 1170px;
+  padding: 0;
+  .popup__close {
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.popup-slider__list {
+  width: 100%;
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    bottom: 0;
+    left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: .5s;
+    background-color: #fff;
+    &:hover {
+      background-color: $brand;
+      svg {
+        fill: #fff;
+      }
+    }
+    svg {
+      fill: #1e1e1e;
+      width: 20px;
+      height: 12px;
+      transition: fill .5s;
+    }
+  }
+  .prev {
+    right: 60px;
+  }
+  .next {
+    right: 0;
+  }
+}
+
+.popup-slider__item {
+  height: 95vh;
+  max-height: 800px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}

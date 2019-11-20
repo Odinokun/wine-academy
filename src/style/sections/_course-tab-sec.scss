@@ -1,0 +1,25 @@
+.course-tab-sec {
+  padding-bottom: 105px;
+  .page-title {
+    margin-bottom: 35px;
+  }
+}
+
+.course-tab__descr {
+  font-family: $opensans;
+  font-size: 15px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 43px;
+  text-align: center;
+  color: #646464;
+}
+
+.course-tab__btn {
+  display: flex;
+  justify-content: center;
+  .btn {
+    font-size: 14px;
+    min-width: 200px;
+  }
+}

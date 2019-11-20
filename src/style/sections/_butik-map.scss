@@ -1,0 +1,110 @@
+.butik-map {
+  position: relative;
+  background-color: #cccae5;
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 550px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include max(767) {
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+
+.butik-map__map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.butik-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 570px;
+  padding: 35px;
+  background-color: #fff;
+}
+
+.butik-banner__type {
+  font-family: $opensans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1e1e1e;
+}
+
+.butik-banner__title {
+  font-family: $opensans;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.butik-banner__svg {
+  width: 13px;
+  height: 13px;
+  margin-bottom: 10px;
+  svg {
+    fill: $brand;
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.butik-banner__phone {
+  font-family: $roboto;
+  font-size: 20px;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #1e1e1e;
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.butik-banner__schedule {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #969696;
+}
+
+.butik-banner__adress {
+  display: flex;
+  color: #969696;
+  svg {
+    fill: #969696;
+    width: 12px;
+    height: 16px;
+    margin-right: 10px;
+    transform: translateY(3px);
+  }
+  span {
+    font-family: $opensans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #969696;
+  }
+}

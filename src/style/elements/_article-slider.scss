@@ -1,0 +1,124 @@
+.article-slider {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+
+  .slick-track {
+    display: flex;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 15;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #ffd65a;
+
+    &:hover {
+      background-color: #ffe289;
+    }
+    svg {
+      z-index: 1;
+      fill: #1e1e1e;
+      width: 16px;
+      height: 10px;
+    }
+  }
+  .prev {
+    left: -45px;
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+
+    @include max(1300) {
+      left: -2px;
+    }
+
+    &.active {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  .next {
+    right: -45px;
+
+    @include max(1300) {
+      right: -2px;
+    }
+  }
+}
+
+.article-slider__slide {
+  padding: 0 15px;
+}
+
+.article-slide {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.article-slide__img {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  margin-bottom: 25px;
+  padding: 20px;
+}
+
+.article-slide__label {
+  max-width: 150px;
+  margin-top: auto;
+  padding: 6px 10px;
+  text-align: center;
+  background-color: #fff;
+  span {
+    font-family: $opensans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+    margin: 0 auto;
+    color: #1e1e1e;
+  }
+}
+
+.article-slide__date {
+  display: flex;
+  margin-bottom: 15px;
+  svg {
+    flex: none;
+    fill: #969696;
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+  }
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    color: #969696;
+  }
+}
+
+.article-slide__title {
+  font-family: $opensans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #1e1e1e;
+}

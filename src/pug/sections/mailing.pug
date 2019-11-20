@@ -1,0 +1,25 @@
+//begin mailing
+.mailing
+  .container
+    //begin mailing__descr
+    .mailing__descr
+      span.mailing__text
+        | Подпишитесь на рассылку новостей
+        br
+        span.mailing__text--bold и получите скидки от
+        =' '
+        span.mailing__text--highlight 10
+        =' '
+        span.mailing__text--bold до
+        =' '
+        span.mailing__text--highlight 50%
+    //end mailing__descr
+
+    //begin mailing__form-wrap
+    .mailing__form-wrap
+      form.mailing__form
+        .mailing__inputs-wrap
+          input(type='email' placeholder='Email').mailing__input
+          input(type='submit' value='подписаться').btn.btn--yellow.mailing__submit
+    //end mailing__form-wrap
+//end mailing

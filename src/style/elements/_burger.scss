@@ -1,0 +1,38 @@
+.burger--open {
+  cursor: pointer;
+
+  svg {
+    fill: $brand;
+    width: 30px;
+    height: 12px;
+    margin-right: 25px;
+    transition: fill .5s;
+  }
+}
+
+.burger--close {
+  position: fixed;
+  z-index: 100;
+  top: 30px;
+  right: 30px;
+  display: block;
+  cursor: pointer;
+  transition: all .5s;
+  opacity: 0;
+  &:hover {
+    transform: rotate(180deg);
+  }
+  &.active {
+    @include max(580) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  svg {
+    fill: $brand;
+    width: 25px;
+    height: 25px;
+    transition: fill .5s;
+  }
+}

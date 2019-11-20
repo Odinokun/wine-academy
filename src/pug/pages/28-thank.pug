@@ -1,0 +1,27 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Thank You'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.thank
+      .container
+        include ../elements/breadcrumbs--dark
+      .thank__text-block
+        .container
+          h2.thank__title Ваш заказ #0001 успешно оформлен!
+          h3.thank__subtitle В ближайшее время с Вами свяжется наш сотрудник для уточнения деталей
+          .thank__btns
+            a(href="#").btn.btn--yellow оплатить онлайн
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

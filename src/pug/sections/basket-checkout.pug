@@ -1,0 +1,128 @@
+//begin basket-checkout
+.basket-checkout
+  h2.page-title.page-title--dark Оформление заказа
+
+  //begin basket-checkout__item
+  .basket-checkout__item
+    .basket-checkout__item-header
+      span.basket-checkout__item-step шаг #1
+      h4.basket-checkout__item-title Укажите данные покупателя
+
+    .basket-checkout__item-input-row
+      .basket-checkout__item-input
+        input(placeholder='E-mail*' required)
+      .basket-checkout__item-input
+        input(placeholder='ФИО*' required)
+      .basket-checkout__item-input
+        input(placeholder='Контактный телефон*' required)
+
+    .basket-checkout__banner(style='background-image:url("assets/img/basket-checkout-banner.jpg")')
+      .basket-checkout__banner-text
+        h4.basket-checkout__banner-title Заполните данные участников и получите промокод на скидку!
+        span Этот шаг вы можете пропустить. После оформления заказа наш специалист перезвонит вам для уточнения деталей.
+      .basket-checkout__banner-link
+        a(href="#").btn.btn--yellow заполнить
+  //end basket-checkout__item
+
+  //begin basket-checkout__item
+  .basket-checkout__item
+    .basket-checkout__item-header
+      span.basket-checkout__item-step шаг #2
+      h4.basket-checkout__item-title Выберите тип
+
+    .basket-checkout__item-radio-row
+      .basket-checkout__item-radio
+        label.basket-checkout__item-radio-label
+          input(type='radio' name='tickets-type')
+          .basket-checkout__item-radio-text
+            span Электронный купон
+      .basket-checkout__item-radio
+        label.basket-checkout__item-radio-label
+          input(type='radio' name='tickets-type' checked)
+          .basket-checkout__item-radio-text
+            span Подарочный сертификат
+  //end basket-checkout__item
+
+  //begin basket-checkout__item
+  .basket-checkout__item
+    .basket-checkout__item-header
+      span.basket-checkout__item-step шаг #3
+      h4.basket-checkout__item-title Выберите способ получения
+
+    .basket-checkout__item-radio-row
+      .basket-checkout__item-radio
+        label.basket-checkout__item-radio-label
+          input(type='radio' name='delivery-type')
+          .basket-checkout__item-radio-text
+            span В магазине
+      .basket-checkout__item-radio
+        label.basket-checkout__item-radio-label
+          input(type='radio' name='delivery-type' checked)
+          .basket-checkout__item-radio-text
+            span Доставка
+
+    .basket-checkout__item-input-row.basket-checkout__item-input-row--delivery
+      .basket-checkout__item-input
+        input(placeholder='Город')
+      .basket-checkout__item-input
+        input(placeholder='Адрес')
+      .basket-checkout__item-input
+        input(placeholder='Индекс')
+  //end basket-checkout__item
+
+  //begin basket-checkout__item
+  .basket-checkout__item
+    .basket-checkout__item-header
+      span.basket-checkout__item-step шаг #4
+      h4.basket-checkout__item-title Выберите способ оплаты
+
+    .basket-checkout__item-radio-sm-row
+      .basket-checkout__item-radio-sm
+        label.basket-checkout__item-radio-sm-label
+          input(type='radio' name='pay-type')
+          .basket-checkout__item-radio-sm-icon
+            img(src="assets/img/pay-01.svg" alt="icon")
+        .basket-checkout__item-radio-sm-text
+          span Банковская карта на сайте
+      .basket-checkout__item-radio-sm
+        label.basket-checkout__item-radio-sm-label
+          input(type='radio' name='pay-type')
+          .basket-checkout__item-radio-sm-icon
+            img(src="assets/img/pay-02.svg" alt="icon")
+        .basket-checkout__item-radio-sm-text
+          span Безналичный расчет (юр.лицо)
+      .basket-checkout__item-radio-sm
+        label.basket-checkout__item-radio-sm-label
+          input(type='radio' name='pay-type')
+          .basket-checkout__item-radio-sm-icon
+            img(src="assets/img/pay-03.svg" alt="icon")
+        .basket-checkout__item-radio-sm-text
+          span Использовать подарочный сертификат
+      .basket-checkout__item-radio-sm
+        label.basket-checkout__item-radio-sm-label
+          input(type='radio' name='pay-type' checked)
+          .basket-checkout__item-radio-sm-icon
+            img(src="assets/img/pay-04.svg" alt="icon")
+        .basket-checkout__item-radio-sm-text
+          span На мероприятии
+
+    .basket-checkout__item-textarea
+      textarea(placeholder='Примечание')
+  //end basket-checkout__item
+
+
+  //begin basket-checkout__footer
+  .basket-checkout__footer
+    .basket-checkout__footer-sum
+      span.basket-checkout__footer-sum-text Итого:
+      span.basket-checkout__footer-sum-price 170 000
+      span.rub c
+
+    .basket-checkout__footer-btn
+      input(type='submit' value='оформить заказ').btn.btn--yellow
+
+  //end basket-checkout__footer
+
+
+
+//end basket-checkout

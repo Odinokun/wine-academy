@@ -1,0 +1,24 @@
+mixin wset-advantages__slide(numb)
+  .wset-advantages__slide
+    .wset-advantages__numb
+      span #{numb}
+    .wset-advantages__text
+      span Отличная структурированность информации, значительно упрощающая усвоение знаний
+
+//begin wset-advantages
+.wset-advantages
+  .container
+    h2.wset-advantages__title Преимущества школы WSET
+
+    //begin wset-advantages__slider
+  .wset-advantages__slider-wrap
+    .wset-advantages__slider
+      +wset-advantages__slide('01')
+      +wset-advantages__slide('02')
+      +wset-advantages__slide('03')
+      +wset-advantages__slide('04')
+      +wset-advantages__slide('05')
+      +wset-advantages__slide('06')
+    //end wset-advantages__slider
+
+//end wset-advantages

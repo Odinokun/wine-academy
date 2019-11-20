@@ -1,0 +1,31 @@
+mixin index-banners__item(img, title, text)
+  a(href="#" class='index-banners__item' style='background-image:url("assets/img/index-banner-' + img + '.jpg");')
+    .index-banners__text
+      h3.index-banners__title #{title}
+      span #{text}
+
+    .index-banners__item-arr
+      +svg('nav-arr-right')
+
+mixin index-banners__item--sm(img, title, text)
+  a(href="#" class='index-banners__item index-banners__item--sm' style='background-image:url("assets/img/index-banner-' + img + '.jpg");')
+    .index-banners__text
+      h3.index-banners__title #{title}
+      span #{text}
+
+    .index-banners__item-arr
+      +svg('nav-arr-right')
+
+//begin index-banners
+.index-banners
+  .container
+    .index-banners__list
+      .index-banners__list-left
+        +index-banners__item('01', 'Обучение в школе WSET', 'WSET - это учебная организация, которая была основана в Лондоне в 1969 году и имела своей целью разработку и внедрение четких единых стандартов, которые можно было бы применять для объективной оценки квалификации специалистов, работающих в винном.')
+        +index-banners__item('02', 'Обучение в школе сомелье', 'Профессия сомелье/кавист предполагает владение целым комплексом дисциплин (энология, производство напитков, сервис и хранение, административная составляющая работы в ресторане или винном магазине).')
+
+      .index-banners__list-right
+        +index-banners__item--sm('03', 'Корпоративный отдых', 'Более 100 мероприятий на любой вкус и цвет вина: дегустации, мастер-классы, эногастрономические ужины.')
+        +index-banners__item--sm('04', 'Аутсорсинг', 'Более 100 мероприятий на любой вкус и цвет вина: дегустации, мастер-классы, эногастрономические ужины.')
+        +index-banners__item--sm('05', 'Отдых и развлечения', 'Более 100 мероприятий на любой вкус и цвет вина: дегустации, мастер-классы, эногастрономические ужины.')
+//end index-banners

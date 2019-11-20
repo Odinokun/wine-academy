@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <clipPath id="vteba">
+            <path fill="#fff" d="M4 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebb">
+            <path fill="#fff" d="M15 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebc">
+            <path fill="#fff" d="M26 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebd">
+            <path fill="#fff" d="M4 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebe">
+            <path fill="#fff" d="M15 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebf">
+            <path fill="#fff" d="M26 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebg">
+            <path fill="#fff" d="M4 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebh">
+            <path fill="#fff" d="M15 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+        <clipPath id="vtebi">
+            <path fill="#fff" d="M26 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
+        </clipPath>
+    </defs>
+    <g>
+        <g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M4 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vteba&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M15 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebb&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M26 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebc&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M4 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebd&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M15 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebe&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M26 11a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebf&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M4 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebg&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M15 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebh&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#4f2d76" stroke-miterlimit="50" stroke-width="4" d="M26 22a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" clip-path="url(&quot;#vtebi&quot;)" />
+            </g>
+        </g>
+    </g>
+</svg>

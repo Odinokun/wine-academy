@@ -1,0 +1,42 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Акции'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.sales
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark #{pageTitle}
+
+      .container
+        .certificates__filter-btns
+          include ../elements/filter-btns/filter-btns-03
+
+        //begin filter-list
+        .sale-cards__filter-list.filter-list
+          include ../elements/sale-cards/sale-card-01
+          include ../elements/sale-cards/sale-card-02
+          include ../elements/sale-cards/sale-card-03
+          include ../elements/sale-cards/sale-card-01
+          include ../elements/sale-cards/sale-card-02
+          include ../elements/sale-cards/sale-card-03
+          include ../elements/sale-cards/sale-card-01
+          include ../elements/sale-cards/sale-card-02
+          include ../elements/sale-cards/sale-card-03
+        //end filter-list
+
+        .sale-cards__more
+          a(href="#").btn.btn--yellow еще
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="12" viewBox="0 0 30 12">
+    <defs>
+        <clipPath id="znixa">
+            <path fill="#fff" d="M0 0h30v2H0z" />
+        </clipPath>
+        <clipPath id="znixb">
+            <path fill="#fff" d="M0 10h20v2H0z" />
+        </clipPath>
+    </defs>
+    <g>
+        <g>
+            <path fill="" stroke="" stroke-miterlimit="50" stroke-width="10" d="M0 0v0h30v2H0v0z" clip-path="url(&quot;#znixa&quot;)" />
+        </g>
+        <g>
+            <path fill="" stroke="" stroke-miterlimit="50" stroke-width="10" d="M0 10v0h20v2H0v0z" clip-path="url(&quot;#znixb&quot;)" />
+        </g>
+    </g>
+</svg>

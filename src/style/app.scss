@@ -1,0 +1,110 @@
+//core
+@import 'core/fonts';
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/base';
+
+//elements
+@import 'elements/header/header-logo';
+//@import 'elements/header/header-menu';
+@import 'elements/header/header-desktop-menu';
+@import 'elements/header/header-search';
+@import 'elements/header/header-basket';
+@import 'elements/header/header-user';
+@import 'elements/header/header-contacts';
+
+@import 'elements/popups/popup';
+@import 'elements/popups/popup-18';
+@import 'elements/popups/popup-wine';
+@import 'elements/popups/popup-main';
+@import 'elements/popups/popup-testing';
+@import 'elements/popups/popup-slider';
+@import 'elements/popups/popup-enter';
+@import 'elements/popups/popup-login';
+@import 'elements/popups/popup-registration';
+@import 'elements/popups/popup-recovery';
+@import 'elements/popups/popup-filter';
+
+@import 'elements/breadcrumbs';
+@import 'elements/burger';
+@import 'elements/certificate';
+@import 'elements/certificate-one';
+@import 'elements/certificate-list';
+@import 'elements/filter-btns';
+@import 'elements/pagination';
+@import 'elements/slickBase';
+@import 'elements/teacher-card';
+@import 'elements/sale-card';
+@import 'elements/banner';
+@import 'elements/article-slider';
+@import 'elements/course-tab';
+@import 'elements/stars';
+
+//section
+@import 'sections/footer';
+@import 'sections/header';
+@import 'sections/mailing';
+
+@import 'sections/index-top';
+@import 'sections/index-events';
+@import 'sections/index-banners';
+@import 'sections/index-about';
+@import 'sections/index-info';
+
+@import 'sections/butik-slider';
+@import 'sections/butik-map';
+
+@import 'sections/articles-aside';
+@import 'sections/wine-slider';
+
+@import 'sections/course-top';
+@import 'sections/course-about';
+@import 'sections/course-know';
+@import 'sections/course-structure';
+@import 'sections/teachers-slider';
+@import 'sections/course-certificate';
+@import 'sections/course-reviews';
+@import 'sections/course-postrelise';
+@import 'sections/course-tab-sec';
+
+@import 'sections/event-testing';
+
+@import 'sections/wset-top';
+@import 'sections/wset-items';
+@import 'sections/wset-about';
+@import 'sections/wset-advantages';
+@import 'sections/wset-know';
+
+@import 'sections/catalog-top';
+@import 'sections/catalog-filter';
+
+@import 'sections/lk-aside';
+
+@import 'sections/basket-checkout';
+
+//pages
+@import 'pages/index';
+@import 'pages/contacts';
+@import 'pages/error-page';
+@import 'pages/thank';
+@import 'pages/sale';
+@import 'pages/sales';
+@import 'pages/certificates';
+@import 'pages/certificate';
+@import 'pages/teachers';
+@import 'pages/butik';
+@import 'pages/articles';
+@import 'pages/article';
+@import 'pages/event';
+@import 'pages/wset';
+@import 'pages/catalog';
+@import 'pages/lk';
+@import 'pages/lk-history';
+@import 'pages/lk-order';
+@import 'pages/lk-reviews';
+@import 'pages/lk-profile';
+@import 'pages/teacher';
+@import 'pages/basket';
+
+
+

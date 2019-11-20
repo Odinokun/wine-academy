@@ -1,0 +1,23 @@
+.course-structure {
+  padding-top: 73px;
+  padding-bottom: 60px;
+  .page-title {
+    margin-bottom: 25px;
+  }
+  .filter-btns {
+    margin-bottom: 3px;
+  }
+}
+
+.course-structure__descr {
+  margin-bottom: 53px;
+  text-align: center;
+  span {
+    font-family: $opensans;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    display: inline-block;
+    color: #969696;
+  }
+}

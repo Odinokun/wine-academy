@@ -1,0 +1,37 @@
+.certificates {
+  .page-title {
+    margin-bottom: 20px;
+  }
+}
+
+.certificates__filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  padding-bottom: 60px;
+
+  @include max(840) {
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+  }
+  @include max(767) {
+    padding-bottom: 30px;
+  }
+  .certificate {
+    width: calc(25% - 30px);
+    margin: 0 15px 30px 15px;
+
+    @include max(1150) {
+      width: calc(33.33% - 30px);
+    }
+    @include max(840) {
+      width: calc(50% - 15px);
+      margin: 0 0 30px 0;
+    }
+    @include max(580) {
+      width: 100%;
+    }
+  }
+}

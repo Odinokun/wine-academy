@@ -1,0 +1,86 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Преподаватели'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.lk
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Личный кабинет
+      .container
+        //begin lk-main
+        .lk-main
+          include ../elements/lk-aside-profile
+
+          //begin lk-body
+          .lk-body
+            //begin lk-profile
+            .lk-profile
+              //begin lk-profile__header
+              .lk-profile__header
+                h2.lk-profile__title Персональные данные
+              //end lk-profile__header
+
+              //begin lk-profile__body
+              .lk-profile__body
+                //begin lk-profile__form
+                form.lk-profile__form
+                  //begin lk-profile__ava-block
+                  .lk-profile__ava-block
+                    .lk-profile__ava-wrap
+                      a(href="#").lk-profile__ava-close
+                      .lk-profile__ava
+                        img(src="assets/img/lk-ava.jpg" alt="picture")
+                    .lk-profile__ava-download
+                      .lk-profile__ava-download-link
+                        +svg('download')
+                        span загрузить новое фото
+                        input(type='file')
+                      .lk-profile__ava-download-text Вы можете загрузить файл в форматах  jpg и png.
+                  //end lk-profile__ava-block
+
+                  //begin lk-profile__input-block
+                  .lk-profile__input-block
+                    .lk-profile__input-wrap
+                      input(placeholder='Имя*' required)
+                    .lk-profile__input-wrap
+                      input(placeholder='Отчество')
+                    .lk-profile__input-wrap
+                      input(placeholder='Фамилия*' required)
+                    .lk-profile__input-wrap
+                      input(placeholder='Дата рождения*' required)
+                    .lk-profile__input-wrap
+                      input(placeholder='Контактный телефон*' required)
+                    .lk-profile__input-wrap
+                      input(placeholder='E-mail*' required)
+                    .lk-profile__input-submit
+                      input(type='submit' value='изменить').btn.btn--yellow
+                  //end lk-profile__input-block
+
+                  //begin lk-profile__password-block
+                  .lk-profile__password-block
+                    .lk-profile__password-wrap
+                      input(type='password' placeholder='Новый пароль')
+                    .lk-profile__password-wrap
+                      input(type='password' placeholder='Подтверждение пароля' required)
+                    .lk-profile__password-submit
+                      input(type='submit' value='сохранить').btn.btn--yellow
+                  //end lk-profile__password-block
+                //end lk-profile__form
+              //end lk-profile__body
+            //end lk-profile
+          //end lk-body
+        //end lk-main
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

@@ -1,0 +1,395 @@
+//begin popups
+.popup__layer
+
+//begin popup-18
+.popup.popup-18#popup-18
+  .popup__close
+    +svg('close')
+
+  .popup-18__img
+    img(src="assets/img/18.png" alt="18+")
+  h2.popup-18__title Сайт содержит информацию только для лиц достигших совершеннолетнего возраста!
+  h3.popup-18__subtitle Для доступа на сайт Вы должны подтвердить, что Вам есть 18 лет, в противном случае нажмите на крестик в правом верхнем углу
+  .popup-18__btn
+    a(href="#").btn.btn--yellow Мне исполнилось 18 лет
+//end popup-18
+
+//begin popup-wine
+.popup.popup-wine#popup-wine
+  .popup__close
+    +svg('close')
+
+  .popup-wine__img
+    img(src="assets/img/popup-wine.jpg" alt="wine")
+  .popup-wine__info
+    h3.popup-wine__title Вино Роза Дей Фрати, розовое, 0,75 л
+    h4.popup-wine__subtitle rose dei frati
+
+    //begin popup-wine__info-card
+    .popup-wine__info-card
+      .popup-wine__descr-row
+        .popup-wine__descr-icon.popup-wine__descr-icon--color
+          img(src='assets/img/pink.png', title='Розовое', alt='Розовое')
+        .popup-wine__descr
+          a.popup-wine__descr-link(href='#') Розовое
+
+      .popup-wine__descr-row
+        .popup-wine__descr-icon.popup-wine__descr-icon--flag
+          img(src='assets/img/prod-card-flag-it.jpg', title='Италия', alt='Италия')
+        .popup-wine__descr
+          a.popup-wine__descr-link(href='/catalog/wine/italy/') Италия
+          | , 
+          a.popup-wine__descr-link(href='/catalog/wine/toskana/') Ломбардия
+
+      .popup-wine__descr-row
+        .popup-wine__descr-icon.popup-wine__descr-icon--sweet
+          img(src='assets/img/icon-sweet.png', alt='icon')
+        .popup-wine__descr
+          a.popup-wine__descr-link(href='#') Полусухое
+
+      .popup-wine__descr-row
+        .popup-wine__descr-icon.popup-wine__descr-icon--grapes
+          img(src='assets/img/icon-grapes.png', alt='icon')
+        .popup-wine__descr
+          a.popup-wine__descr-link(href='#') Гроппелло 60 %
+          .popup-wine__descr-popover-wrap
+            a(href="#").popup-wine__descr-popover-link.not-link +3
+            .popup-wine__descr-popover
+              .popup-wine__descr-popover-close
+                +svg('close')
+              a(href="#").popup-wine__descr-popover-link Канайоло 25 %
+              a(href="#").popup-wine__descr-popover-link Каберне Совиньон 25 %
+              a(href="#").popup-wine__descr-popover-link Мерло 25 %
+
+      .popup-wine__descr-row
+        .popup-wine__descr-icon.popup-wine__descr-icon--name
+          img(src='assets/img/icon-name.png', alt='Ка Дей Фрати')
+        .popup-wine__descr
+          a.popup-wine__descr-link(href='/catalog/wine/la-bollina/') Ка Дей Фрати
+
+      .popup-wine__descr-row
+        .popup-wine__descr-icon.popup-wine__descr-icon--alcohol
+          img(src='assets/img/icon-water.png', alt='icon')
+        span.popup-wine__descr-link.not-link 12.5 %
+    //end popup-wine__info-card
+//end popup-wine
+
+//begin popup-main
+.popup.popup-main#popup-main
+  .popup__close
+    +svg('close')
+
+  h3.popup-title Заголовок формы
+  form.popup-main__form
+    input.popup-input(placeholder='Ваше имя*' required)
+    input.popup-input(placeholder='Введите e-mail*' required)
+    input.popup-input.phone-mask(placeholder='Телефон*' required)
+    textarea.popup-textarea(placeholder='Комментарий')
+    .popup-main__recaptcha.popup-recaptcha
+      .g-recaptcha(data-sitekey="6Lc0GMEUAAAAAJyUVsUJc2KMlUCEpxLQyV0JWn74")
+    input.popup-main__submit.btn.btn--yellow(type='submit' value='отправить')
+//end popup-main
+
+//begin popup-testing
+.popup.popup-testing#popup-testing
+  .popup__close
+    +svg('close')
+
+  h3.popup-title Записаться на дегустацию
+  span.popup-testing__descr Заполните заявку и Вам позвонит менеджер для выбора места и времени дегустации
+  form.popup-testing__form
+    input.popup-input(placeholder='Ваше имя*' required)
+    input.popup-input.phone-mask(placeholder='+7 ( ___ ) ___ - __ - __' required)
+    .popup-testing__recaptcha.popup-recaptcha
+      .g-recaptcha(data-sitekey="6Lc0GMEUAAAAAJyUVsUJc2KMlUCEpxLQyV0JWn74")
+    label.popup-agree
+      input(type='checkbox' checked)
+      span Я даю своё согласие на обработку моих персональных данных в соответствии с законом № 152-ФЗ "О персональных данных" от 27.07.2006 и принимаю условия пользовательского соглашения
+
+    input.popup-testing__submit.btn.btn--yellow(type='submit' value='отправить')
+//end popup-testing
+
+//begin popup-slider
+.popup.popup-slider#popup-slider
+  .popup__close
+    +svg('close')
+  .popup-slider__list
+    .popup-slider__item(style='background-image:url("assets/img/popup-slide-01.jpg")')
+    .popup-slider__item(style='background-image:url("assets/img/popup-slide-02.jpg")')
+//end popup-slider
+
+//begin popup-enter
+.popup.popup-enter#popup-enter
+  .popup__close
+    +svg('close')
+
+  .popup-enter__header
+    h3.popup-title.active(data-tab='#popup-login') Вход
+    h3.popup-title(data-tab='#popup-registration') Регистрация
+
+  //begin popup-login
+  form.popup-login.active#popup-login
+    input.popup-input.phone-mask(placeholder='Введите телефон*' required)
+    input.popup-input(placeholder='Введите пароль*' type='password' required)
+    .popup-login__social
+      span Войти с помощью:
+      .popup-login__social-links
+        a(href="#").popup-login__social-link.popup-login__social-link--fb
+          +svg('fb')
+        a(href="#").popup-login__social-link.popup-login__social-link--vk
+          +svg('vk')
+        a(href="#").popup-login__social-link.popup-login__social-link--google
+          +svg('google')
+
+    .popup-login__btns
+      input(type='submit' value='войти').btn.btn--yellow
+      a(href="#") забыли пароль?
+  //end popup-login
+
+  //begin popup-registration
+  form.popup-registration#popup-registration
+    input.popup-input(placeholder='Ваше имя*' required)
+    input.popup-input(placeholder='Ваша фамилия')
+    input.popup-input(placeholder='Ваше отчество')
+    input.popup-input(placeholder='Дата рождения*' required)
+    input.popup-input.error(placeholder='Введите e-mail*' required)
+    input.popup-input.phone-mask(placeholder='Контактный телефон*' required)
+    input.popup-input(placeholder='Пароль*' type='password' required)
+    input.popup-input(placeholder='Повторите пароль*' type='password' required)
+
+    .popup-main__recaptcha.popup-recaptcha
+      .g-recaptcha(data-sitekey="6Lc0GMEUAAAAAJyUVsUJc2KMlUCEpxLQyV0JWn74")
+    input.btn.btn--yellow(type='submit' value='регистрация')
+  //end popup-registration
+//end popup-enter
+
+//begin popup-recovery
+.popup.popup-recovery#popup-recovery
+  .popup__close
+    +svg('close')
+
+  h3.popup-title Восстановление пароля
+
+  form.popup-recovery__form
+    .popup-recovery__radios
+      label.popup-recovery__radio
+        input(type='radio' name='popup-radio'  checked).popup-recovery__radio-phone
+        span По СМС на телефон
+      label.popup-recovery__radio
+        input(type='radio' name='popup-radio').popup-recovery__radio-email
+        span На почту
+
+    .popup-recovery__inputs
+      input.popup-input.popup-input--phone.phone-mask(placeholder='Контактный телефон*')
+      input.popup-input.popup-input--email(placeholder='Введите e-mail*')
+
+    .popup-main__recaptcha.popup-recaptcha
+      .g-recaptcha(data-sitekey="6Lc0GMEUAAAAAJyUVsUJc2KMlUCEpxLQyV0JWn74")
+    input.btn.btn--yellow(type='submit' value='отправить')
+  //end popup-registration
+//end popup-enter
+
+
+//begin popup-filter
+.popup.popup-filter#popup-filter
+  .popup__close
+    +svg('close')
+
+  .popup-filter__wrap
+    
+    //begin popup-filter__col
+    .popup-filter__col
+      //begin catalog-filter__item
+      .catalog-filter__item
+        h4.catalog-filter__link-title Отдых и развлечения
+        ul.catalog-filter__link-list
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Дегустации
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link.active Эногастрономические ужины
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Мастер-классы
+  
+        h4.catalog-filter__link-title Обучение в школе сомелье
+        ul.catalog-filter__link-list
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Утренний курс
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Вечерний курс
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Экспресс курс
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Профессиональный блок
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Вечерний курс
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Экспресс курс
+          li.catalog-filter__link-item
+            a(href="#").catalog-filter__link Профессиональный блок
+      //end catalog-filter__item
+    //end popup-filter__col
+      
+    //begin popup-filter__col
+    .popup-filter__col
+      //begin catalog-filter__item
+      .catalog-filter__item.filter-date
+        .catalog-filter__item-header
+          h4.catalog-filter__title Даты
+          a(href="#").catalog-filter__reset.catalog-filter__reset--date сбросить фильтр
+        .catalog-filter__item-body
+          .filter-date__two-input
+            input().filter-date__datepicker
+            span &#8212;
+            input().filter-date__datepicker
+          .filter-date__checkbox
+            label.filter-date__checkbox-label
+              input(type='checkbox')
+              span Прошедшие мероприятия
+      //end catalog-filter__item
+  
+      //begin catalog-filter__item
+      .catalog-filter__item.filter-time
+        .catalog-filter__item-header
+          h4.catalog-filter__title Время дня
+          a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+  
+        .catalog-filter__item-body
+          .filter-time__checkbox
+            label.filter-time__checkbox-label
+              input(type='checkbox')
+              span Утро (начинается с 8:00)
+          .filter-time__checkbox
+            label.filter-time__checkbox-label
+              input(type='checkbox')
+              span День (начинается с 12:00)
+          .filter-time__checkbox
+            label.filter-time__checkbox-label
+              input(type='checkbox')
+              span Вечер (начинается с 17:00)
+      //end catalog-filter__item
+    //end popup-filter__col
+      
+    //begin popup-filter__col
+    .popup-filter__col
+      //begin catalog-filter__item
+      .catalog-filter__item.filter-price
+        .catalog-filter__item-header
+          h4.catalog-filter__title
+            | Цена (
+            span c
+            | )
+          a(href="#").catalog-filter__reset.catalog-filter__reset--price сбросить фильтр
+        .catalog-filter__item-body
+          .filter-price__two-input
+            input().filter-price__one
+            span &#8212;
+            input().filter-price__two
+          .filter-price__range-wrap
+            .filter-price__range
+          .filter-price__range-vol-wrap
+            .filter-price__range-vol-left
+            .filter-price__range-vol-right
+      //end catalog-filter__item
+
+      //begin catalog-filter__item
+      .catalog-filter__item.filter-skills
+        .catalog-filter__item-header
+          h4.catalog-filter__title Уровень
+          a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+        .catalog-filter__item-body
+          .filter-skills__checkbox
+            label.filter-skills__checkbox-label
+              input(type='checkbox')
+              span Продвинутый
+          .filter-skills__checkbox
+            label.filter-skills__checkbox-label
+              input(type='checkbox')
+              span Новичок
+          .filter-skills__checkbox
+            label.filter-skills__checkbox-label
+              input(type='checkbox')
+              span Профессионал
+      //end catalog-filter__item
+    //end popup-filter__col
+
+    //begin popup-filter__col
+    .popup-filter__col
+      //begin catalog-filter__item
+      .catalog-filter__item.filter-adress
+        .catalog-filter__item-header
+          h4.catalog-filter__title Место
+          a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+        .catalog-filter__item-body
+          .filter-adress__checkbox
+            label.filter-adress__checkbox-label
+              input(type='checkbox')
+              span.filter-adress__checkbox-adress СПб, пр. Добролюбова, 3
+              span.filter-adress__checkbox-metro метро Спортивная
+          .filter-adress__checkbox
+            label.filter-adress__checkbox-label
+              input(type='checkbox')
+              span.filter-adress__checkbox-adress СПб, ул. Оренбургская, 2
+              span.filter-adress__checkbox-metro метро Площадь Ленина
+          .filter-adress__checkbox
+            label.filter-adress__checkbox-label
+              input(type='checkbox')
+              span.filter-adress__checkbox-adress СПб, пр. Маршала Жукова, 35/1
+              span.filter-adress__checkbox-metro метро Проспект Ветеранов
+          .filter-adress__checkbox
+            label.filter-adress__checkbox-label
+              input(type='checkbox')
+              span.filter-adress__checkbox-adress СПб, ул. Казанская, 8-10
+              span.filter-adress__checkbox-metro метро Невский проспект
+      //end catalog-filter__item
+
+      //begin catalog-filter__item
+      .catalog-filter__item.filter-tags
+        .catalog-filter__item-header
+          h4.catalog-filter__title Теги
+          a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+        .catalog-filter__item-body
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Красное вино
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Франция
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Божеле
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Франция вино
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Красное вино
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Франция
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Божеле
+          .filter-tags__checkbox
+            label.filter__checkbox-label
+              input(type='checkbox')
+              span #Франция вино
+      //end catalog-filter__item
+    //end popup-filter__col
+
+    //begin popup-filter__footer
+    .popup-filter__footer
+      //.filter-btns__row
+      input(type='submit' value='применить').btn.btn--yellow
+      a(href="#").filter-all__reset сбросить
+    //end popup-filter__footer
+
+//end popup-filter
+
+//end popups

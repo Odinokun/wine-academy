@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30 26">
+    <defs>
+        <clipPath id="308ga">
+            <path fill="#fff" d="M0 12h30v2H0z" />
+        </clipPath>
+        <clipPath id="308gb">
+            <path fill="#fff" d="M0 0h30v2H0z" />
+        </clipPath>
+        <clipPath id="308gc">
+            <path fill="#fff" d="M0 24h30v2H0z" />
+        </clipPath>
+    </defs>
+    <g>
+        <g>
+            <g>
+                <path fill="none" stroke="#c8c8c8" stroke-miterlimit="50" stroke-width="10" d="M0 12v0h30v2H0v0z" clip-path="url(&quot;#308ga&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#c8c8c8" stroke-miterlimit="50" stroke-width="10" d="M0 0v0h30v2H0v0z" clip-path="url(&quot;#308gb&quot;)" />
+            </g>
+            <g>
+                <path fill="none" stroke="#c8c8c8" stroke-miterlimit="50" stroke-width="10" d="M0 24v0h30v2H0v0z" clip-path="url(&quot;#308gc&quot;)" />
+            </g>
+        </g>
+    </g>
+</svg>

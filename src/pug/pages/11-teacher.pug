@@ -1,0 +1,102 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Ольга Белошицкая'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.teacher
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Ольга Белошицкая
+        
+        //begin teacher__rait-row
+        .teacher__rait-row
+          .teacher__rait
+            .teacher__rait-stars.rait-stars.rait-stars--yellow.rait-stars--04
+              +rait-star
+              +rait-star
+              +rait-star
+              +rait-star
+              +rait-star
+            .teacher__rait-numb
+              span 27
+        //end teacher__rait-row
+          
+        //begin teacher-block
+        .teacher-block
+          //begin teacher-block__photo
+          .teacher-block__photo
+            .teacher-block__photo-ava
+              img(src="assets/img/teacher.jpg" alt="picture")
+            .teacher-block__photo-btn
+              a(href="#").btn.btn--yellow задать вопрос
+          //end teacher-block__photo
+
+          //begin teacher-block__information
+          .teacher-block__information
+
+            //begin teacher-block__about
+            .teacher-block__about
+              span Несколько слов о себе. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+            //end teacher-block__about
+
+            //begin article-main__table
+            .article-main__table
+              .article-main__table-row
+                .article-main__table-item Стаж работы:
+                .article-main__table-item 15 лет
+              .article-main__table-row
+                .article-main__table-item Профессиональное увлечение:
+                .article-main__table-item винный туризм в страны Старого света
+            //end article-main__table
+
+            //begin teacher-block__education
+            .teacher-block__education
+              h3.teacher-block__education-title Образование
+              .teacher-block__education-table
+                .teacher-block__education-row
+                  .teacher-block__education-item
+                    span 2014
+                  .teacher-block__education-item
+                    span Прошла обучение в школе вин "Сомелье", затем продолжила работу в качестве администратора образовательных программ центра винной культуры "Академия вина".
+
+                .teacher-block__education-row
+                  .teacher-block__education-item
+                    span 2015
+                  .teacher-block__education-item
+                    span С 2015 года является аккредитованным провайдером программ британской винной школы WSET.
+                    span Обладатель сертификата WSET Level 3.
+
+                .teacher-block__education-row
+                  .teacher-block__education-item
+                    span 2016
+                  .teacher-block__education-item
+                    span Ольга является постоянным лектором в Академии вина, кроме этого, занимается разработкой и проведением корпоративных мероприятий, а также - организацией и координацией образовательных программ центра: Школа Сомелье, Интенсивные курсы по виноделию.
+            //end teacher-block__education
+
+            //begin teacher-block__ps
+            .teacher-block__ps
+              p
+                strong Для усовершенствования своих знаний и опыта посещает винные выставки и семинары по виноделию, участвует в организации встреч с представителями лучших винных хозяйств и производителей.
+            //end teacher-block__ps
+
+          //end teacher-block__information
+
+
+        //end teacher-block
+
+      include ../sections/teacher-events
+      include ../sections/teacher-blog
+      include ../sections/course-reviews
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

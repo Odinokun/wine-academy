@@ -1,0 +1,109 @@
+.butik-slider__list {
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    background-color: #fff;
+
+    @include max(1280) {
+      left: auto;
+    }
+    &:hover {
+      background-color: $brand;
+      svg {
+        fill: #fff;
+      }
+    }
+    svg {
+      fill: #1e1e1e;
+      width: 20px;
+      height: 12px;
+      transition: fill .5s;
+    }
+  }
+  .prev {
+    transform: translateX(495px);
+
+    @include max(1280) {
+      right: 115px;
+      transform: translateX(0);
+    }
+    @include max(1023) {
+      right: 95px;
+    }
+    @include max(425) {
+      right: 80px;
+    }
+  }
+  .next {
+    transform: translateX(555px);
+
+    @include max(1280) {
+      right: 55px;
+      transform: translateX(0);
+    }
+    @include max(1023) {
+      right: 35px;
+    }
+    @include max(425) {
+      right: 20px;
+    }
+  }
+}
+
+.butik-slider__slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .page-title {
+    margin-bottom: 30px;
+  }
+}
+
+.butik-slider__title {
+  font-family: $playfair;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #fff;
+}
+
+.butik-slider__descr {
+  font-family: $opensans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.butik-slider__breadcrumbs {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+}

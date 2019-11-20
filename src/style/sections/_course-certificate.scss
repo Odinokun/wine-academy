@@ -1,0 +1,253 @@
+.course-certificate-sec {
+  padding-top: 113px;
+  padding-bottom: 113px;
+  background-color: #f5f5f5;
+}
+
+.course-certificate__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+
+  @include max(920) {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    min-width: 140px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    &.active {
+      pointer-events: none;
+      color: #1e1e1e;
+      background-color: #fff;
+    }
+  }
+}
+
+.course-certificate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(425) {
+    padding: 40px 20px;
+  }
+}
+
+.course-certificate__body {
+  display: flex;
+  align-items: flex-end;
+  margin-top: auto;
+
+  @include max(920) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.course-certificate__body-left {
+  max-width: 500px;
+
+  @include max(920) {
+    max-width: 100%;
+  }
+
+  .page-title {
+    line-height: 1.25;
+    margin-bottom: 35px;
+    text-align: left;
+  }
+}
+
+.course-certificate__about {
+  display: flex;
+  margin-bottom: 80px;
+
+  @include max(920) {
+    margin-bottom: 15px;
+  }
+  @include max(375) {
+    flex-direction: column;
+  }
+}
+
+.course-certificate__about-item {
+  display: flex;
+  padding-right: 22px;
+
+  @include max(920) {
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+  span {
+    &:nth-child(1) {
+      font-family: $opensans;
+      font-size: 35px;
+      font-weight: 300;
+      line-height: 30px;
+      padding-right: 9px;
+      color: #ffd65a;
+    }
+    &:nth-child(2) {
+      font-family: $opensans;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1;
+      color: #fff;
+    }
+  }
+}
+
+.course-certificate__date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  svg {
+    flex: none;
+    fill: #fff;
+    width: 16px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #fff;
+  }
+}
+
+.course-certificate__adress {
+  display: flex;
+  color: #fff;
+  svg {
+    flex: none;
+    fill: #fff;
+    width: 12px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #fff;
+  }
+}
+
+.course-certificate__body-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+  text-align: right;
+
+  @include max(920) {
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 60px;
+    text-align: left;
+  }
+}
+
+.course-certificate__old-price {
+  font-family: $opensans;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-bottom: 13px;
+  text-decoration: line-through;
+  color: #fff;
+
+  @include max(580) {
+    font-size: 20px;
+  }
+
+  span {
+    font-family: $rub;
+  }
+}
+
+.course-certificate__new-price {
+  font-family: $opensans;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 23px;
+  margin-bottom: 25px;
+  color: #fff;
+
+  @include max(580) {
+    font-size: 40px;
+  }
+
+  span {
+    font-family: $rub;
+    font-weight: 400;
+  }
+}
+
+.course-certificate__places {
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  display: block;
+  margin-bottom: 17px;
+  color: #ffd65a;
+}
+
+.course-certificate__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include max(920) {
+    align-items: flex-start;
+  }
+  @include max(375) {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 14px;
+    min-width: 200px;
+    margin-bottom: 17px;
+  }
+  .btn--white-2 {
+    min-width: 280px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include max(375) {
+      width: 100%;
+      min-width: 0;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+}
+
+.course-certificate__certificate {
+  font-family: $opensans;
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  padding-bottom: 3px;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}

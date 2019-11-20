@@ -1,0 +1,94 @@
+.teacher-card {
+  display: flex !important;
+  flex-direction: column;
+  padding: 15px 20px;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+.teacher-card__rait {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: auto;
+}
+
+.teacher-card__rait-stars {
+  display: flex;
+  svg {
+    margin-left: 5px;
+  }
+}
+
+.teacher-card__rait-numb {
+  span {
+    font-family: $roboto;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-left: 11px;
+    color: #ffd65a;
+  }
+}
+
+.teacher-card__ava {
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50%;
+  }
+}
+
+.teacher-card__position {
+  font-family: $opensans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #969696;
+}
+
+.teacher-card__name {
+  font-family: $opensans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-bottom: 12px;
+  color: #1e1e1e;
+}
+
+.teacher-card__about {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  margin-bottom: 15px;
+  color: #646464;
+}
+
+.teacher-card__experience {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  margin-bottom: 15px;
+  color: #969696;
+
+  strong {
+    font-weight: 600;
+    color: #1e1e1e;
+  }
+}

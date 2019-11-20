@@ -1,0 +1,25 @@
+.lk {
+  padding-bottom: 127px;
+  .page-title {
+    margin-bottom: 50px;
+  }
+}
+
+.lk-main {
+  display: flex;
+  align-items: flex-start;
+
+  @include max(840) {
+    flex-direction: column;
+  }
+}
+
+.lk-body {
+  overflow: auto;
+  width: 100%;
+  padding-left: 30px;
+
+  @include max(840) {
+    padding-left: 0;
+  }
+}

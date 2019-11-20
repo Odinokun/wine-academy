@@ -1,0 +1,106 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Скидки'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.sale
+      .container
+        include ../elements/breadcrumbs--dark
+
+      //begin sale-banner
+      .sale-banner
+        .container
+          .sale-banner__banner(style='background-image:url("assets/img/bg/bg-sale-banner.jpg")')
+            h2.sale-banner__title
+              | Месяц безумных скидок
+              br
+              | на обучение в школе сомелье
+
+            //begin counter
+            .sale-banner__counter.counter#counter
+              .counter__item
+                span.counter__item-number#counter__days 00
+                span.counter__item-text день
+              .counter__item
+                span.counter__item-number#counter__hours 00
+                span.counter__item-text часов
+              .counter__item
+                span.counter__item-number#counter__minutes 00
+                span.counter__item-text мин
+              .counter__item
+                span.counter__item-number#counter__seconds 00
+                span.counter__item-text сек
+            //end counter
+
+            //-a(href="#").btn.btn--yellow зарегистрироваться
+            footer.sale-banner__footer
+              +svg('calendar')
+              span Акция действует с 1 декабря 2018 по 31 января 2018
+      //end sale-banner
+
+      //begin sale-text
+      .sale-text
+        .container
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p
+            strong
+              |Интенсивный курс длится 5 дней (понедельник - пятница), в последний день - экзамен. Язык преподавания - английский.
+              br
+              strong Регистрация на курсы заканчивается 10 января 2017 г.
+          //-.sale-text__btn
+            a(href="#").btn.btn--yellow зарегистрироваться
+      //end sale-text
+
+      include ../sections/sale-slider
+
+      //begin sale-nav
+      .sale-nav
+        .container
+          a(href="#").sale-nav__item.sale-nav__item--left
+            +svg('nav-arr-left')
+            span предыдущая акция
+          a(href="#").sale-nav__item.sale-nav__item--right
+            span cледующая акция
+            +svg('nav-arr-right')
+      //end sale-nav
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts
+    script.
+      const counter = document.getElementById('counter'),
+        second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+      let countDown = new Date('Dec 31, 2019 13:20:00').getTime(),
+        x = setInterval(function () {
+          if (counter) {
+            let now = new Date().getTime(),
+              distance = countDown - now;
+            // added zero before date ('0' + currentDate.getHours()).slice(-2)
+            document.getElementById('counter__days').innerText = ('0' + Math.floor(distance / (day))).slice(-2);
+            document.getElementById('counter__hours').innerText = ('0' + Math.floor((distance % (day)) / (hour))).slice(-2);
+            document.getElementById('counter__minutes').innerText = ('0' + Math.floor((distance % (hour)) / (minute))).slice(-2);
+            document.getElementById('counter__seconds').innerText = ('0' + Math.floor((distance % (minute)) / second)).slice(-2);
+            //do something later when date is reached
+            if (distance < 0) {
+              document.getElementById('counter__days').innerText = '00';
+              document.getElementById('counter__hours').innerText = '00';
+              document.getElementById('counter__minutes').innerText = '00';
+              document.getElementById('counter__seconds').innerText = '00';
+            }
+          }
+        }, second);
+

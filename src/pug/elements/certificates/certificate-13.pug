@@ -1,0 +1,40 @@
+//begin certificate
+.certificate.certificate--red
+  a(href="#" class='certificate__img' style='background-image:url("assets/img/certificate-01.jpg");')
+    .certificate__rait
+      .certificate__rait-stars.rait-stars.rait-stars--white.rait-stars--04
+        +rait-star
+        +rait-star
+        +rait-star
+        +rait-star
+        +rait-star
+      .certificate__rait-numb
+        span 280
+
+  .certificate__date
+    +svg('calendar')
+    span 12 декабря в 19:00
+
+  .certificate__label
+    span Обучение: лекция
+  a(href="#").certificate__title Лекция-дегустация на тему: Согревающие вин
+
+  .certificate__footer
+    .certificate__price
+      .certificate__new-price
+        |1300
+        =' '
+        span c
+    .certificate__pay
+      a(href="#").btn.btn--yellow купить билет
+
+  a(href="#" target="_blank" rel="noreferrer").certificate__adress
+    +svg('marker')
+    span СПб, пр. Добролюбова, д. 3
+
+  .certificate__hashtags
+    a(href="#").certificate__hashtag #Красное вино
+    a(href="#").certificate__hashtag #Франция
+    a(href="#").certificate__hashtag #Божеле
+
+//end certificate

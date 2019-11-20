@@ -1,0 +1,82 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Преподаватели'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.lk
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Личный кабинет
+      .container
+        //begin lk-main
+        .lk-main
+          include ../elements/lk-aside
+
+          //begin lk-body
+          .lk-body
+            //begin lk-history
+            .lk-history
+              //begin lk-history__header
+              .lk-history__header
+                h2.lk-history__title История заказов
+                .lk-history__btns
+                  a(href="#").btn.btn--violet мероприятия
+                  a(href="#").btn.btn--violet заказы
+              //end lk-history__header
+
+              //begin lk-history__body
+              .lk-history__body
+                //begin lk-history__table
+                .lk-history__table
+                  .lk-history__table-row.lk-history__table-row--header
+                    .lk-history__table-td
+                      span Заказ
+                    .lk-history__table-td
+                      span Статус
+                    .lk-history__table-td
+                      span Сумма
+                  .lk-history__table-row
+                    .lk-history__table-td
+                      span Заказ #0001 от 01.01.2019
+                    .lk-history__table-td.lk-history__table-td--registered
+                      span Зарегистрирован
+                    .lk-history__table-td
+                      span 1 500
+                      span.rub a
+                  .lk-history__table-row
+                    .lk-history__table-td
+                      span Заказ #0001 от 01.01.2019
+                    .lk-history__table-td.lk-history__table-td--pay
+                      span Оплачен
+                    .lk-history__table-td
+                      span 57 000
+                      span.rub a
+                  .lk-history__table-row
+                    .lk-history__table-td
+                      span Заказ #0001 от 01.01.2019
+                    .lk-history__table-td.lk-history__table-td--finished
+                      span Завершен
+                    .lk-history__table-td
+                      span 7 000
+                      span.rub a
+                //end lk-history__table
+              //end lk-history__body
+            //end lk-history
+          //end lk-body
+        //end lk-main
+
+      .container
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

@@ -1,0 +1,38 @@
+mixin course-reviews__item()
+  //begin course-reviews__item
+  .course-reviews__item
+    .course-reviews__item-inn
+      .course-reviews__left
+        .course-reviews__ava
+          img(src="assets/img/course-ava.jpg" alt="ava")
+      .course-reviews__right
+        .course-reviews__rait
+          .course-reviews__rait-stars.rait-stars.rait-stars--yellow.rait-stars--04
+            +rait-star
+            +rait-star
+            +rait-star
+            +rait-star
+            +rait-star
+        .course-reviews__info
+          .course-reviews__name Анна Иванова,
+          .course-reviews__date 01.01.2019
+        .course-reviews__text
+          span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+  //end course-reviews__item
+
+//begin course-reviews
+.course-reviews
+  .container
+    h2.page-title.page-title--dark Отзывы участников
+
+    //begin course-reviews__slider
+    .course-reviews__slider
+      +course-reviews__item()
+      +course-reviews__item()
+      +course-reviews__item()
+    //end course-reviews__slider
+
+    .course-reviews__btn
+      a(href="#").btn.btn--yellow оставить отзыв
+
+//end course-reviews

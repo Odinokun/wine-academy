@@ -1,0 +1,20 @@
+//begin butik-map
+.butik-map
+  .butik-map__map#butik-map
+
+  .container
+    .butik-map__banner.butik-banner
+      span.butik-banner__type Винный бутик
+      h3.butik-banner__title Sangiovese Club
+      .butik-banner__svg
+        +svg('phone')
+      a(href="tel:+88126776666").butik-banner__phone
+        |8 (812)
+        =' '
+        strong 677 66 66
+      span.butik-banner__schedule ежедневно с 10:00 до 22:00
+
+      a(href="#" target="_blank" rel="nofollow noopener noreferrer").butik-banner__adress
+        +svg('marker')
+        span СПб. ул. Казанская д. 8-10
+//end butik-map

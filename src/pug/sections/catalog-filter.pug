@@ -1,0 +1,187 @@
+//begin catalog-filter-wrap
+.catalog-filter-wrap
+
+  form.catalog-filter
+    a(href="#").catalog-filter__close-btn
+      +svg('nav-arr-left')
+    //begin catalog-filter__item
+    .catalog-filter__item
+      h4.catalog-filter__link-title Отдых и развлечения
+      ul.catalog-filter__link-list
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link Дегустации
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link.active Эногастрономические ужины
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link Мастер-классы
+
+      h4.catalog-filter__link-title Обучение в школе сомелье
+      ul.catalog-filter__link-list
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link Утренний курс
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link Вечерний курс
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link Экспресс курс
+        li.catalog-filter__link-item
+          a(href="#").catalog-filter__link Профессиональный блок
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-date
+      .catalog-filter__item-header
+        h4.catalog-filter__title Даты
+        a(href="#").catalog-filter__reset.catalog-filter__reset--date сбросить фильтр
+      .catalog-filter__item-body
+        .filter-date__two-input
+          input().filter-date__datepicker
+          span &#8212;
+          input().filter-date__datepicker
+        .filter-date__checkbox
+          label.filter-date__checkbox-label
+            input(type='checkbox')
+            span Прошедшие мероприятия
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-time
+      .catalog-filter__item-header
+        h4.catalog-filter__title Время дня
+        a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+
+      .catalog-filter__item-body
+        .filter-time__checkbox
+          label.filter-time__checkbox-label
+            input(type='checkbox')
+            span Утро (начинается с 8:00)
+        .filter-time__checkbox
+          label.filter-time__checkbox-label
+            input(type='checkbox')
+            span День (начинается с 12:00)
+        .filter-time__checkbox
+          label.filter-time__checkbox-label
+            input(type='checkbox')
+            span Вечер (начинается с 17:00)
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-price
+      .catalog-filter__item-header
+        h4.catalog-filter__title
+          |Цена (
+          span c
+          |)
+        a(href="#").catalog-filter__reset.catalog-filter__reset--price сбросить фильтр
+      .catalog-filter__item-body
+        .filter-price__two-input
+          input().filter-price__one
+          span &#8212;
+          input().filter-price__two
+        .filter-price__range-wrap
+          .filter-price__range
+        .filter-price__range-vol-wrap
+          .filter-price__range-vol-left
+          .filter-price__range-vol-right
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-skills
+      .catalog-filter__item-header
+        h4.catalog-filter__title Уровень
+        a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+      .catalog-filter__item-body
+        .filter-skills__checkbox
+          label.filter-skills__checkbox-label
+            input(type='checkbox')
+            span Продвинутый
+        .filter-skills__checkbox
+          label.filter-skills__checkbox-label
+            input(type='checkbox')
+            span Новичок
+        .filter-skills__checkbox
+          label.filter-skills__checkbox-label
+            input(type='checkbox')
+            span Профессионал
+        a(href="#").filter__load-more показать еще
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-adress
+      .catalog-filter__item-header
+        h4.catalog-filter__title Место
+        a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+      .catalog-filter__item-body
+        .filter-adress__checkbox
+          label.filter-adress__checkbox-label
+            input(type='checkbox')
+            span.filter-adress__checkbox-adress СПб, пр. Добролюбова, 3
+            span.filter-adress__checkbox-metro метро Спортивная
+        .filter-adress__checkbox
+          label.filter-adress__checkbox-label
+            input(type='checkbox')
+            span.filter-adress__checkbox-adress СПб, ул. Оренбургская, 2
+            span.filter-adress__checkbox-metro метро Площадь Ленина
+        .filter-adress__checkbox
+          label.filter-adress__checkbox-label
+            input(type='checkbox')
+            span.filter-adress__checkbox-adress СПб, пр. Маршала Жукова, 35/1
+            span.filter-adress__checkbox-metro метро Проспект Ветеранов
+        .filter-adress__checkbox
+          label.filter-adress__checkbox-label
+            input(type='checkbox')
+            span.filter-adress__checkbox-adress СПб, ул. Казанская, 8-10
+            span.filter-adress__checkbox-metro метро Невский проспект
+        a(href="#").filter__load-out свернуть
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-tags
+      .catalog-filter__item-header
+        h4.catalog-filter__title Теги
+        a(href="#").catalog-filter__reset.catalog-filter__reset--checkbox сбросить фильтр
+      .catalog-filter__item-body
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Красное вино
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Франция
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Божеле
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Франция вино
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Красное вино
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Франция
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Божеле
+        .filter-tags__checkbox
+          label.filter__checkbox-label
+            input(type='checkbox')
+            span #Франция вино
+    //end catalog-filter__item
+
+    //begin catalog-filter__item
+    .catalog-filter__item.filter-btns
+      .filter-btns__row
+        input(type='submit' value='применить').btn.btn--yellow
+        a(href="#").filter-all__reset сбросить
+      .filter-btns__row
+        a(href="#" data-popup='#popup-filter').filter-btns__open-popup-filter.popup-open расширенный фильтр
+    //end catalog-filter__item
+
+  .catalog-filter__open.hidden
+//end catalog-filter-wrap

@@ -1,0 +1,142 @@
+.index-banners {
+  padding-top: 125px;
+  padding-bottom: 95px;
+  background-color: #fff;
+}
+
+.index-banners__list {
+  display: flex;
+
+  @include max(840) {
+    flex-wrap: wrap;
+  }
+}
+
+.index-banners__list-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-right: 30px;
+
+  @include max(840) {
+    flex: inherit;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .index-banners__item {
+    height: 50%;
+    min-height: 390px;
+  }
+}
+
+.index-banners__list-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: none;
+  width: 370px;
+
+  @include max(840) {
+    width: 100%;
+  }
+
+  .index-banners__item {
+    height: 33.33%;
+    min-height: 250px;
+  }
+}
+
+.index-banners__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(840) {
+    padding: 70px 40px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+    background-image: linear-gradient(45deg, $brand 0%, #cf4093 100%);
+  }
+  &:hover {
+    &::before {
+      opacity: .8;
+    }
+    .index-banners__item-arr svg {
+      fill: $brand;
+    }
+  }
+}
+
+.index-banners__text {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+
+  @include max(840) {
+    max-width: 500px;
+  }
+
+  span {
+    font-family: $opensans;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    color: #fff;
+    @include max(680) {
+      display: none !important;
+    }
+  }
+}
+
+.index-banners__item--sm {
+  .index-banners__text {
+    span {
+      display: none;
+    }
+  }
+}
+
+.index-banners__title {
+  font-family: $opensans;
+  font-size: 23px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.index-banners__item-arr {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  svg {
+    fill: #1e1e1e;
+    width: 20px;
+    height: 12px;
+    transition: fill .5s;
+  }
+}

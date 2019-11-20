@@ -1,0 +1,45 @@
+.rait-stars{
+  svg {
+    width: 12px;
+    height: 12px;
+    fill:transparent;
+    overflow: visible;
+  }
+
+}
+.rait-stars--white{
+  stroke:#fff;
+  &.rait-stars--01 svg:nth-child(1){
+      fill:#fff;
+  }
+  &.rait-stars--02 svg:nth-child(-n + 2){
+      fill:#fff;
+  }
+  &.rait-stars--03 svg:nth-child(-n + 3){
+      fill:#fff;
+  }
+  &.rait-stars--04 svg:nth-child(-n + 4){
+      fill:#fff;
+  }
+  &.rait-stars--05 svg:nth-child(-n + 5){
+      fill:#fff;
+  }
+}
+.rait-stars--yellow{
+  stroke:#ffd65a;
+  &.rait-stars--01 svg:nth-child(1){
+      fill:#ffd65a;
+  }
+  &.rait-stars--02 svg:nth-child(-n + 2){
+      fill:#ffd65a;
+  }
+  &.rait-stars--03 svg:nth-child(-n + 3){
+      fill:#ffd65a;
+  }
+  &.rait-stars--04 svg:nth-child(-n + 4){
+      fill:#ffd65a;
+  }
+  &.rait-stars--05 svg:nth-child(-n + 5){
+      fill:#ffd65a;
+  }
+}

@@ -1,0 +1,43 @@
+mixin teachers-slider__item(img, name)
+  //begin teacher-slider-card
+  .teachers-slider__item
+    a(href="#").teacher-slider-card
+      .teacher-slider-card__left
+        .teacher-slider-card__ava
+          img(src="assets/img/teacher-ava-" + img + ".jpg" alt="avatar")
+      .teacher-slider-card__right
+        .teacher-slider-card__rait
+          .teacher-slider-card__rait-stars.rait-stars.rait-stars--yellow.rait-stars--04
+            +rait-star
+            +rait-star
+            +rait-star
+            +rait-star
+            +rait-star
+          .teacher-slider-card__rait-numb
+            span 27
+        h4.teacher-slider-card__position Преподаватель
+        h3.teacher-slider-card__name #{name}
+        span.teacher-slider-card__about Лектор образовательного центра, преподаватель сомелье.
+        span.teacher-slider-card__experience
+          | Опыт:
+          =' '
+          strong 15 лет
+  //end teacher-slider-card
+
+//begin teachers-slider
+.teachers-slider
+  .container
+    h2.page-title.page-title--light Преподаватели
+
+    //begin teachers-slider__list
+    .teachers-slider__list
+      +teachers-slider__item('01', 'Ольга Белошицкая-Верпш')
+      +teachers-slider__item('02', 'Алена Белошицкая-Верпш')
+      +teachers-slider__item('03', 'Ольга Белошицкая')
+      +teachers-slider__item('04', 'Иван Смирнов')
+    //end teachers-slider__list
+
+    .teachers-slider__btn
+      a(href="#").btn.btn--yellow задать вопрос
+
+//end teachers-slider

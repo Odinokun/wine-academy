@@ -1,0 +1,57 @@
+//begin course-certificate-sec
+.course-certificate-sec
+  .container
+
+    //begin course-certificate
+    .course-certificate(style='background-image: url("assets/img/bg/bg-course-top.jpg")')
+      //begin course-certificate__tabs
+      .course-certificate__tabs
+        a(href="#").btn.btn--white.active 12 декабря
+        a(href="#").btn.btn--white 13 февраля
+        a(href="#").btn.btn--white 13 июля
+      //end course-certificate__tabs
+
+      //begin course-certificate__body
+      .course-certificate__body
+        //begin course-certificate__body-left
+        .course-certificate__body-left
+          h1.page-title.page-title--light Утренний курс школы сомелье Академия Вина
+          .course-certificate__about
+            .course-certificate__about-item
+              span 47
+              span занятий
+            .course-certificate__about-item
+              span 4
+              span зачета
+            .course-certificate__about-item
+              span 1
+              span экзамен
+          .course-certificate__date
+            +svg('calendar')
+            span 12 декабря в 19:00
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").course-certificate__adress
+            +svg('marker')
+            span СПб, пр. Добролюбова, д. 3, Дегустационный зал Cabernet S Club
+        //end course-certificate__body-left
+
+        //begin course-certificate__body-right
+        .course-certificate__body-right
+          .course-certificate__price
+            .course-certificate__old-price
+              | 15000
+              =' '
+              span a
+            .course-certificate__new-price
+              | 13000
+              =' '
+              span c
+          .course-certificate__places свободно 4 места из 6
+          .course-certificate__btn
+            a(href="#").btn.btn--white-2 купить подарочный сертификат
+            a(href="#").btn.btn--yellow купить билет
+          a(href="#").course-certificate__certificate у меня есть подарочный сертификат
+        //end course-certificate__body-right
+      //end course-certificate__body
+    //end course-certificate
+
+//end course-certificate-sec

@@ -1,0 +1,46 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Сертификаты'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.certificates
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark #{pageTitle}
+
+      .container
+        .certificates__filter-btns
+          include ../elements/filter-btns/filter-btns-01
+
+        //begin filter-list
+        .certificates__filter-list.filter-list
+          include ../elements/certificates/certificate-01
+          include ../elements/certificates/certificate-02
+          include ../elements/certificates/certificate-03
+          include ../elements/certificates/certificate-04
+          include ../elements/certificates/certificate-05
+          include ../elements/certificates/certificate-06
+          include ../elements/certificates/certificate-07
+          include ../elements/certificates/certificate-08
+          include ../elements/certificates/certificate-09
+          include ../elements/certificates/certificate-10
+          include ../elements/certificates/certificate-11
+          include ../elements/certificates/certificate-12
+          include ../elements/certificates/certificate-13
+          include ../elements/certificates/certificate-14
+          include ../elements/certificates/certificate-15
+        //end filter-list
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

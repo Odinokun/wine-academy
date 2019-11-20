@@ -1,0 +1,40 @@
+mixin index-info__item(img, title, text)
+  //begin index-info__item
+  .index-info__item
+    .index-info__item-left
+      a(href="#").index-info__item-img
+        img(src="assets/img/index-info-" + img + ".jpg" alt="picture")
+      .index-info__item-date
+        span 10.07.2011
+
+    .index-info__item-right
+      a(href="#").index-info__item-title #{title}
+      span.index-info__item-text #{text}
+      .index-info__item-link
+        a(href="#")
+          span подробнее
+          +svg('arrow')
+  //end index-info__item
+
+//begin index-info
+.index-info
+  .container
+    //begin index-info__list
+    .index-info__list
+      //begin index-info__news
+      .index-info__news
+        h2.page-title.page-title--dark Новости
+        +index-info__item('01', 'Повышение акцизов',  'Если ГД РФ поддержит предложение Минздрава РФ повысить ставки')
+        +index-info__item('02', 'Повышение акцизов на алкоголь в РФ',  'Если ГД РФ поддержит предложение...')
+        +index-info__item('03', 'Повышение акцизов',  'Если ГД РФ поддержит предложение Минздрава РФ повысить ставки')
+        +index-info__item('01', 'Повышение акцизов',  'Если ГД РФ поддержит предложение Минздрава РФ повысить ставки')
+        +index-info__item('02', 'Повышение акцизов на алкоголь в РФ',  'Если ГД РФ поддержит предложение...')
+        +index-info__item('03', 'Повышение акцизов',  'Если ГД РФ поддержит предложение Минздрава РФ повысить ставки')
+      //end index-info__news
+
+      //begin index-info__banner
+      .index-info__banner-wrap
+        include ../elements/banner
+      //end index-info__banner
+    //end index-info__list
+//end index-info

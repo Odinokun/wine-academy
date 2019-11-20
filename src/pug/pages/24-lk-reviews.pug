@@ -1,0 +1,75 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Преподаватели'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.lk
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Личный кабинет
+      .container
+        //begin lk-main
+        .lk-main
+          include ../elements/lk-aside
+
+          //begin lk-body
+          .lk-body
+            //begin lk-reviews
+            .lk-reviews
+              //begin lk-reviews__header
+              .lk-reviews__header
+                h2.lk-reviews__title Отзывы
+              //end lk-reviews__header
+
+              //begin lk-reviews__body
+              .lk-reviews__body
+                //begin lk-reviews__table
+                .lk-reviews__table
+                  .lk-reviews__table-row.lk-reviews__table-row--header
+                    .lk-reviews__table-td
+                      span Отзывы
+                    .lk-reviews__table-td
+                      span Статус
+
+                  .lk-reviews__table-row
+                    .lk-reviews__table-td
+                      .lk-reviews__table-td-header
+                        span Отзыв #0001 от 01.01.2019
+                        a(href="#") Вина Старого и Нового Света
+                      .lk-reviews__table-td-body
+                        span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                    .lk-reviews__table-td
+                      span.lk-reviews__table-td--published Опубликован
+                      a(href="#").lk-reviews__table-td--change Изменить
+
+                  .lk-reviews__table-row
+                    .lk-reviews__table-td
+                      .lk-reviews__table-td-header
+                        span Отзыв #0002 от 01.01.2019
+                        a(href="#") Вина Старого и Нового Света
+                      .lk-reviews__table-td-body
+                        span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                    .lk-reviews__table-td
+                      span.lk-reviews__table-td--moderation На модерации
+
+                //end lk-reviews__table
+              //end lk-reviews__body
+            //end lk-reviews
+          //end lk-body
+        //end lk-main
+
+      .container
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

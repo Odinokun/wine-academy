@@ -1,0 +1,231 @@
+.wset-advantages {
+  padding-top: 105px;
+  padding-bottom: 102px;
+  background-image: url('../img/bg/bg-wset-advantages.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .wset-advantages__title {
+    font-family: $opensans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+//.certificate-slider {
+//  overflow: hidden;
+//  max-width: 1770px;
+//  margin: 0 auto;
+//  .container {
+//    &::before {
+//      position: absolute;
+//      z-index: 10;
+//      top: 0;
+//      right: calc(100% - 30px);
+//      bottom: 0;
+//      width: 100vw;
+//      content: '';
+//      background-color: #f7f7f7;
+//
+//      @include max(1023) {
+//        display: none;
+//      }
+//    }
+//    &::after {
+//      position: absolute;
+//      z-index: 10;
+//      top: 0;
+//      bottom: 0;
+//      left: calc(100% - 30px);
+//      width: 100vw;
+//      content: '';
+//      opacity: .6;
+//      background-color: #fff;
+//
+//      @include max(1023) {
+//        display: none;
+//      }
+//    }
+//  }
+//}
+//
+.wset-advantages__slider-wrap {
+  overflow: hidden;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  @include max(840) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.wset-advantages__slider {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  //  width: calc(100% + 30px);
+  //  margin-bottom: 55px;
+  //  margin-left: -15px;
+  //
+  //  @include max(1023) {
+  //    margin-bottom: 80px;
+  //  }
+  //
+  .slick-list {
+    overflow: visible;
+
+    @include max(840) {
+      overflow: hidden;
+    }
+  }
+  .slick-track {
+    display: flex;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 15;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 18px;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+      svg {
+        fill: #ffd65a;
+      }
+    }
+
+    svg {
+      z-index: 1;
+      fill: #fff;
+      width: 30px;
+      height: 18px;
+      transition: fill .5s;
+    }
+  }
+  .prev {
+    left: -350px;
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+
+    @include max(1250) {
+      left: -160px;
+    }
+    @include max(840) {
+      left: -10px;
+    }
+
+    &.active {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  .next {
+    right: -350px;
+
+    @include max(1250) {
+      right: -160px;
+    }
+    @include max(840) {
+      right: -10px;
+    }
+  }
+}
+
+.wset-advantages__slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.wset-advantages__slide.slick-active {
+  .wset-advantages__numb {
+    transform: translateY(0);
+  }
+  .wset-advantages__numb::before {
+    opacity: 1;
+  }
+  .wset-advantages__text {
+    opacity: 1;
+  }
+}
+
+.wset-advantages__slide .wset-advantages__numb {
+  @include max(1250) {
+    transform: translateX(200px);
+  }
+  @include max(840) {
+    transform: translateX(0);
+  }
+}
+
+.wset-advantages__slide.slick-active + .wset-advantages__slide .wset-advantages__numb {
+  @include max(1250) {
+    transform: translateX(-200px);
+  }
+  @include max(840) {
+    transform: translateX(0);
+  }
+}
+
+.wset-advantages__numb {
+  position: relative;
+  margin-bottom: 40px;
+  transition: transform .5s;
+  &::before {
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    width: 38px;
+    height: 38px;
+    content: '';
+    transition: opacity .5s;
+    opacity: 0;
+    background-image: url('../img/wset-advantages-numb-check.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  span {
+    font-family: $opensans;
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 1;
+    display: block;
+    user-select: none;
+    color: #fff;
+  }
+}
+
+.wset-advantages__text {
+  transition: opacity .5s;
+  opacity: 0;
+  span {
+    font-family: $opensans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+
+    @include max(580) {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+}

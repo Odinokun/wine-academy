@@ -1,0 +1,67 @@
+//begin course-top
+.course-top(style='background-image: url("assets/img/bg/bg-course-top.jpg")')
+  .container
+    //begin course-top__top-row
+    .course-top__top-row
+      include ../elements/breadcrumbs--light
+      a(href="#").course-top__back.btn.btn--white
+        +svg('nav-arr-left')
+        span назад в каталог
+    //end course-top__top-row
+
+    //begin course-top__header
+    .course-top__header
+      .course-top__header-left
+        .course-top__label.course-top__label--red
+          span Обучение: лекция
+        .course-top__view
+          +svg('grape')
+          span Серия дегустаций FRIENDS
+
+        .course-top__rait
+          .course-top__rait-stars.rait-stars.rait-stars--white.rait-stars--04
+            +rait-star
+            +rait-star
+            +rait-star
+            +rait-star
+            +rait-star
+          .course-top__rait-numb
+            span 15
+
+      a(href="#").course-top__schedule
+        span расписание
+        img(src="assets/img/calendar.svg" alt="calendar")
+    //end course-top__header
+
+    //begin course-top__body
+    .course-top__body
+      //begin course-top__body-left
+      .course-top__body-left
+        h1.page-title.page-title--light
+          |Лекция-дегустация
+          br
+          |на тему: Португалия
+        span.course-top__descr Попробовать в Португалии неудачное вино практически невозможно. Даже в купленной наугад бутылке вас будет ждать небольшое произведение винодельческого искусства. Наверное, именно поэтому Португалия давно и заслуженно носит титул винной сверхдержавы.
+
+        .course-top__date
+          +svg('calendar')
+          span 12 декабря в 19:00
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").course-top__adress
+          +svg('marker')
+          span СПб, пр. Добролюбова, д. 3, Дегустационный зал Cabernet S Club
+      //end course-top__body-left
+
+      //begin course-top__body-right
+      .course-top__body-right
+        .course-top__price
+          .course-top__new-price
+            |1300
+            =' '
+            span c
+        .course-top__places свободно 4 места из 6
+        .course-top__btn
+          a(href="#").btn.btn--yellow купить билет
+        a(href="#").course-top__certificate у меня есть подарочный сертификат
+      //end course-top__body-right
+    //end course-top__body
+//end course-top

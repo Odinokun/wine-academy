@@ -1,0 +1,234 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Статьи'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.articles
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark #{pageTitle}
+        
+        //begin articles__wrap
+        .articles__wrap
+          //begin articles__main
+          .articles__main.articles-main
+            //begin articles-main__top
+            .articles-main__top.articles-top
+              a(href="#" class='articles-top__pic' style='background-image:url("assets/img/article-top.jpg")')
+              .articles-top__info
+                span.articles-top__tag Название раздела
+                a(href="#").articles-top__title В ГД внесли законопроект, разрешающий рекламу в СМИ вина из стран ЕАЭС
+                span.articles-top__text Правительство РФ внесло в Госдуму законопроект, разрешающий рекламу в СМИ вина, произведенного в Евразийском экономическом союзе (ЕАЭС), следует из электронной базы нижней палаты парламента.
+                .articles-top__date
+                  +svg('calendar')
+                  span 12 декабря 2018
+            //end articles-main__top
+
+            //begin articles-second__wrap
+            .articles-second__wrap
+              .articles-second
+                a(href="#" class='articles-second__pic' style='background-image:url("assets/img/article-second-01.jpg")')
+                  span.articles-second__tag Название раздела
+                .articles-second__info
+                  .articles-second__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-second__title Название статьи в длинные две строки две строки
+
+              .articles-second
+                a(href="#" class='articles-second__pic' style='background-image:url("assets/img/article-second-02.jpg")')
+                  span.articles-second__tag Название раздела
+                .articles-second__info
+                  .articles-second__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-second__title Название статьи в длинные две строки две строки
+
+              .articles-second
+                a(href="#" class='articles-second__pic' style='background-image:url("assets/img/article-second-03.jpg")')
+                  span.articles-second__tag Название раздела
+                .articles-second__info
+                  .articles-second__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-second__title Название статьи в длинные две строки две строки
+            //end articles-second__wrap
+
+            //begin articles-collage__wrap
+            .articles-collage__wrap
+
+              .articles-collage__col
+                .articles-collage
+                  .articles-collage__img-wrap
+                    span.articles-collage__tag Название раздела
+                    a(href="#" class='articles-collage__pic' style='background-image:url("assets/img/article-second-01.jpg")')
+                  .articles-collage__info
+                    .articles-collage__date
+                      +svg('calendar')
+                      span 12 декабря 2018
+                    a(href="#").articles-collage__title Название статьи в длинные две строки две строки
+
+              .articles-collage__col
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+              .articles-collage__col
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+            //end articles-collage__wrap
+
+            //begin articles-collage__wrap
+            .articles-collage__wrap
+
+              .articles-collage__col
+                .articles-collage
+                  .articles-collage__img-wrap
+                    span.articles-collage__tag Название раздела
+                    a(href="#" class='articles-collage__pic' style='background-image:url("assets/img/article-second-01.jpg")')
+                  .articles-collage__info
+                    .articles-collage__date
+                      +svg('calendar')
+                      span 12 декабря 2018
+                    a(href="#").articles-collage__title Название статьи в длинные две строки две строки
+
+              .articles-collage__col
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+              .articles-collage__col
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+            //end articles-collage__wrap
+
+            //begin articles-collage__wrap
+            .articles-collage__wrap
+
+              .articles-collage__col
+                .articles-collage
+                  .articles-collage__img-wrap
+                    span.articles-collage__tag Название раздела
+                    a(href="#" class='articles-collage__pic' style='background-image:url("assets/img/article-second-01.jpg")')
+                  .articles-collage__info
+                    .articles-collage__date
+                      +svg('calendar')
+                      span 12 декабря 2018
+                    a(href="#").articles-collage__title Название статьи в длинные две строки две строки
+
+              .articles-collage__col
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+              .articles-collage__col
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+
+                .articles-collage__small.articles-small
+                  .articles-small__date
+                    +svg('calendar')
+                    span 12 декабря 2018
+                  a(href="#").articles-small__title Название статьи в длинные две строки две строки
+            //end articles-collage__wrap
+
+
+          //end articles__main
+
+          include ../sections/articles-aside
+        //end articles__wrap
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

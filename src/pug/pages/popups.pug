@@ -1,0 +1,36 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Popups'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main
+      .popup-btns(style='display:flex;flex-direction:column;align-items: center;justify-content:center;')
+        br
+        a(href="#" data-popup='#popup-18').btn.btn--yellow.popup-open Мне исполнилось 18 лет
+        br
+        a(href="#" data-popup='#popup-wine').btn.btn--yellow.popup-open Вино Роза Дей Фрати
+        br
+        a(href="#" data-popup='#popup-main').btn.btn--yellow.popup-open Заголовок формы
+        br
+        a(href="#" data-popup='#popup-testing').btn.btn--yellow.popup-open Записаться на дегустацию
+        br
+        a(href="#" data-popup='#popup-slider').btn.btn--yellow.popup-open Popup slider
+        br
+        a(href="#" data-popup='#popup-enter').btn.btn--yellow.popup-open Вход / Регистрация
+        br
+        a(href="#" data-popup='#popup-recovery').btn.btn--yellow.popup-open Восстановление пароля
+        br
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts

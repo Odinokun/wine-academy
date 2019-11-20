@@ -1,0 +1,45 @@
+.popup-testing {
+  width: 95%;
+  max-width: 570px;
+  padding: 65px 35px 80px 35px;
+
+  .popup__close {
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.popup-testing__descr {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  display: block;
+  max-width: 310px;
+  margin: -15px auto 25px auto;
+  text-align: center;
+  color: #646464;
+}
+
+.popup-testing__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.popup-testing__submit {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  color: #1e1e1e;
+}

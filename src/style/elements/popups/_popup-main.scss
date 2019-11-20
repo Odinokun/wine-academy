@@ -1,0 +1,33 @@
+.popup-main {
+  width: 95%;
+  max-width: 570px;
+  padding: 65px 35px 80px 35px;
+
+  .popup__close {
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.popup-main__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.popup-main__submit {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  color: #1e1e1e;
+}

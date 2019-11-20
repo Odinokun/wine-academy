@@ -1,0 +1,25 @@
+//begin index-events
+.index-events
+  .container
+    h2.page-title.page-title--dark Ближайшие мероприятия
+
+    .index-events__filter-btns
+      include ../elements/filter-btns/filter-btns-04
+
+    //begin certificate-slider
+  .certificate-slider
+    .container
+      .certificate-slider__list
+        include ../elements/certificates/certificate-09
+        include ../elements/certificates/certificate-10
+        include ../elements/certificates/certificate-11
+        include ../elements/certificates/certificate-12
+        include ../elements/certificates/certificate-10
+        include ../elements/certificates/certificate-11
+    //end certificate-slider
+
+    .certificate-slider__all-link
+      a(href="#")
+        span все мероприятия
+        +svg('arrow')
+//end index-events

@@ -1,0 +1,42 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Сертификат на посещение эногастрономического ужина'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.certificate-page
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark #{pageTitle}
+
+        include ../elements/certificates/certificate-one
+
+      .container
+        h2.page-title.page-title--dark Ближайшие мероприятия
+
+      .certificate-slider
+        .container
+          .certificate-slider__list
+            include ../elements/certificates/certificate-09
+            include ../elements/certificates/certificate-10
+            include ../elements/certificates/certificate-11
+            include ../elements/certificates/certificate-12
+            include ../elements/certificates/certificate-10
+            include ../elements/certificates/certificate-11
+
+        .certificate-slider__all-link
+          a(href="#")
+            span все мероприятия
+            +svg('arrow')
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

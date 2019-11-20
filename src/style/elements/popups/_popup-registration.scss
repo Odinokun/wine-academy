@@ -1,0 +1,21 @@
+.popup-registration {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+
+  &.active {
+    display: flex;
+  }
+  .btn {
+    font-family: $opensans;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    color: #1e1e1e;
+  }
+}

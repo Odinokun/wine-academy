@@ -1,0 +1,144 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Ольга Белошицкая'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.basket
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Ваша корзина
+
+      .container
+        //begin basket-events
+        .basket-events
+          //begin basket-event__table
+          .basket-event__table
+            //begin basket-event__row
+            .basket-event__row.basket-event__row--header
+              .basket-event__item.basket-event__item--event
+                span Мероприятие
+              .basket-event__item.basket-event__item--price
+                span Цена
+              .basket-event__item.basket-event__item--tickets
+                span Кол-во
+              .basket-event__item.basket-event__item--sum
+                span Сумма
+            //end basket-event__row
+
+            //begin basket-event__row
+            .basket-event__row
+              .basket-event__item.basket-event__item--event
+                .basket-event__item-info
+                  .basket-event__item-info-header
+                    .basket-event__label.basket-event__label--blue
+                      span Обучение: курс
+                    .basket-event__view
+                      +svg('grape')
+                      span Профессия: Сомелье
+                  h3.basket-event__item-info-title Лекция-дегустация на тему: Согревающие вина солнечной Испании
+                  .basket-event__item-info-footer
+                    .basket-event__date
+                      +svg('calendar')
+                      span 12 декабря в 19:00
+                    a(href="#" target="_blank" rel="noreferrer").basket-event__adress
+                      +svg('marker')
+                      span СПб, пр. Добролюбова, д. 3
+
+              .basket-event__item.basket-event__item--price
+                .basket-event__item-price
+                  span 55 000
+                  span.rub c
+
+              .basket-event__item.basket-event__item--tickets
+                .basket-event__item-tickets
+                  button.basket-event__down-count &#8211;
+                  input.basket-event__counter(value='1')
+                  button.basket-event__up-count +
+
+              .basket-event__item.basket-event__item--sum
+                .basket-event__item-sum
+                  span 165 000
+                  span.rub c
+                a(href="#").basket-event__item-basket
+                  +svg('trash')
+            //end basket-event__row
+
+            //begin basket-event__row
+            .basket-event__row
+              .basket-event__item.basket-event__item--event
+                .basket-event__item-info
+                  .basket-event__item-info-header
+                    .basket-event__label.basket-event__label--red
+                      span Дегустация
+                  h3.basket-event__item-info-title Лекция-дегустация на тему: Согревающие вина солнечной Испании
+                  .basket-event__item-info-footer
+                    .basket-event__date
+                      +svg('calendar')
+                      span 12 декабря в 19:00
+                    a(href="#" target="_blank" rel="noreferrer").basket-event__adress
+                      +svg('marker')
+                      span СПб, пр. Добролюбова, д. 3
+
+              .basket-event__item.basket-event__item--price
+                .basket-event__item-price
+                  span 5 000
+                  span.rub c
+
+              .basket-event__item.basket-event__item--tickets
+                .basket-event__item-tickets
+                  button.basket-event__down-count &#8211;
+                  input.basket-event__counter(value='1')
+                  button.basket-event__up-count +
+
+              .basket-event__item.basket-event__item--sum
+                .basket-event__item-sum
+                  span 5 000
+                  span.rub c
+                a(href="#").basket-event__item-basket
+                  +svg('trash')
+            //end basket-event__row
+          //end basket-event__table
+        //end basket-events
+
+        //begin basket-events__table-footer
+        .basket-events__table-footer
+          //begin basket-promo
+          .basket-promo
+            .basket-promo__enter
+              input(placeholder='Введите промокод').basket-promo__input
+              input(type='submit' value='активировать').btn.btn--yellow
+            //-.basket-promo__result
+              .basket-promo__result-descr
+                span.basket-promo__result-text Промокод активирован
+                a(href="#").basket-promo__result-reset
+                  +svg('close')
+                  span сбросить
+
+              .basket-promo__result-banner
+                span.basket-promo__result-banner-text  Скидка по промокоду:
+                span.basket-promo__result-banner-price 10 000
+                span.rub c
+          //end basket-promo
+
+          .basket-events__table-footer-sum
+            span.basket-events__table-footer-sum-text Итого:
+            span.basket-events__table-footer-sum-price 170 000
+            span.rub c
+        //end basket-events__table-footer
+
+      .container
+        include ../sections/basket-checkout-party
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

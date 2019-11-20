@@ -1,0 +1,88 @@
+.header__user {
+  margin-left: 49px;
+
+  @include max(1023) {
+    margin-left: auto;
+  }
+}
+
+.header-user__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-user__row {
+  display: flex;
+  align-items: center;
+  flex: none;
+  cursor: pointer;
+  &.active {
+    pointer-events: none;
+    .header-user__arr svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.header-user__icon {
+  margin-right: 9px;
+  svg {
+    fill: #1e1e1e;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.header-user__name {
+  font-family: $playfair;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e1e1e;
+
+  @include max(375) {
+    font-size: 14px;
+  }
+}
+
+.header-user__arr {
+  flex: none;
+  height: 15px;
+  padding: 5px 0 5px 10px;
+
+  svg {
+    fill: #1e1e1e;
+    width: 10px;
+    height: 5px;
+    transition: all .5s;
+  }
+}
+
+.header-user__list {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  display: none;
+  min-width: 150px;
+  margin: 0;
+  padding: 23px 45px 11px 20px;
+  background-color: #e6e6e6;
+}
+
+.header-user__item {
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.header-user__link {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color .5s;
+  text-decoration: none;
+  color: #1e1e1e;
+  &:hover {
+    color: $brand;
+  }
+}

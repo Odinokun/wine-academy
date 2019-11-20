@@ -1,0 +1,25 @@
+//begin header__contacts
+.header__contacts.header-contacts
+  a(href="tel:+88126776666").header-contacts__phone
+    |8 (812)
+    =' '
+    b 677 66 66
+
+  //begin header-contacts__cities
+  .header-contacts__cities.dropdown-wrap
+    .header-contacts__target-city.dropdown-arr
+      span Санкт-Петербург
+      +svg('arr-down')
+    //begin header-contacts__cities-list
+    ul.header-contacts__cities-list.dropdown-list
+      li.header-contacts__cities-item
+        a(href="#").header-contacts__city Москва
+      li.header-contacts__cities-item
+        a(href="#").header-contacts__city Волгоград
+      li.header-contacts__cities-item
+        a(href="#").header-contacts__city Ростов
+      li.header-contacts__cities-item
+        a(href="#").header-contacts__city Нижний новгород
+    //end header-contacts__cities-list
+  //end header-contacts__cities
+//end header__contacts

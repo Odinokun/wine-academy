@@ -1,0 +1,261 @@
+.certificate-one {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 250px;
+  margin-bottom: 72px;
+  background-color: #fff;
+
+  @include max(767) {
+    flex-direction: column;
+  }
+}
+
+.certificate-one__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.certificate-one--blue {
+  border-right: 3px solid #45a4d0;
+
+  @include max(767) {
+    border-right: none;
+    border-bottom: 3px solid #45a4d0;
+  }
+
+  .certificate-one__label {
+    background-color: #45a4d0;
+  }
+}
+
+.certificate-one--violet {
+  border-right: 3px solid $brand;
+
+  @include max(767) {
+    border-right: none;
+    border-bottom: 3px solid $brand;
+  }
+
+  .certificate-one__label {
+    background-color: $brand;
+  }
+}
+
+.certificate-one--red {
+  border-right: 3px solid #bb2e27;
+
+  @include max(767) {
+    border-right: none;
+    border-bottom: 3px solid #bb2e27;
+  }
+
+  .certificate-one__label {
+    background-color: #bb2e27;
+  }
+}
+
+.certificate-one__img {
+  flex: none;
+  width: 270px;
+  padding: 23px 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(767) {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+.certificate-one__view {
+  display: flex;
+  align-items: center;
+  svg {
+    fill: #fff;
+    width: 18px;
+    height: 20px;
+    margin-right: 9px;
+  }
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+  }
+}
+
+.certificate-one__info {
+  width: 100%;
+  padding: 25px 17px 25px 30px;
+
+  @include max(767) {
+    padding: 25px 20px;
+  }
+  @include max(425) {
+    padding: 25px 15px;
+  }
+}
+
+.certificate-one__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-right: 8px;
+
+  @include max(767) {
+    padding-right: 0;
+  }
+}
+
+.certificate-one__label {
+  width: 100%;
+  max-width: 150px;
+  margin-right: 10px;
+  padding: 7px 10px;
+  text-align: center;
+  span {
+    font-family: $opensans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+  }
+}
+
+.certificate-one__id {
+  font-family: $opensans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #969696;
+}
+
+.certificate-one__body {
+  display: flex;
+
+  @include max(1023) {
+    flex-direction: column;
+  }
+}
+
+.certificate-one__body-left {
+  width: 100%;
+  padding-right: 45px;
+
+  @include max(767) {
+    padding-right: 0;
+  }
+}
+
+.certificate-one__title {
+  font-family: $opensans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+
+.certificate-one__text {
+  p {
+    font-family: $opensans;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    margin: 0;
+    color: #646464;
+  }
+}
+
+.certificate-one__body-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: none;
+  width: 200px;
+  padding-bottom: 5px;
+  text-align: right;
+
+  @include max(1023) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex: inherit;
+    width: 100%;
+    padding-top: 20px;
+    text-align: left;
+  }
+}
+
+.certificate-one__old-price {
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: -2px;
+  padding-right: 12px;
+  white-space: nowrap;
+  text-decoration: line-through;
+  color: #969696;
+
+  @include max(580) {
+    font-size: 16px;
+  }
+
+  span {
+    font-family: $rub;
+  }
+}
+
+.certificate-one__new-price {
+  font-family: $opensans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 18px;
+  padding-right: 8px;
+  white-space: nowrap;
+  color: #1e1e1e;
+
+  @include max(1023) {
+    margin-bottom: 0;
+  }
+  @include max(580) {
+    font-size: 30px;
+  }
+
+  span {
+    font-family: $rub;
+    font-weight: 400;
+  }
+}
+
+.certificate-one__pay {
+  width: 100%;
+
+  @include max(1023) {
+    width: 200px;
+  }
+
+  .btn {
+    font-family: $opensans;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #1e1e1e;
+  }
+}

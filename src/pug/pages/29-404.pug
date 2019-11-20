@@ -1,0 +1,34 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = '404'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.error-page
+      //.container
+        include ../elements/breadcrumbs--light
+      .error-page__text-block
+        .container
+          h2.error-page__title 404
+          h3.error-page__subtitle Сожалеем, но запрошенную страницу невозможно открыть
+          span.error-page__text
+            |Вы можете
+            =' '
+            a(href="#") перейти на главную страницу
+            =' '
+            |или посетить подходящий раздел
+          .error-page__btns
+            a(href="#").btn.btn--yellow для себя
+            a(href="#").btn.btn--yellow для бизнеса
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

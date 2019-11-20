@@ -1,0 +1,64 @@
+extends ../_template
+
+mixin contacts-card--simple(title)
+  //begin contacts-card
+  .contacts-card.contacts-card--simple
+    h3.contacts-card__title #{title}
+    .contacts-card__phone
+      +svg('phone')
+      a(href="tel:+88126776666")
+        | 8 (812)
+        =' '
+        b 677 66 66
+    span.contacts-card__schedule ежедневно с 10:00 до 22:00
+  //end contacts-card
+
+mixin contacts-card(title, bg, adress)
+  //begin contacts-card
+  div(class='contacts-card' style='background-image:url("assets/img/contacts-card-' + bg + '.jpg")')
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-card__link
+    h4.contacts-card__subtitle винный бутик
+    h3.contacts-card__title #{title}
+    .contacts-card__phone
+      +svg('phone')
+      a(href="tel:+88126776666")
+        | 8 (812)
+        =' '
+        b 677 66 66
+    span.contacts-card__schedule ежедневно с 10:00 до 22:00
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-card__adress
+      +svg('marker')
+      span #{adress}
+  //end contacts-card
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Контакты'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.contacts
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark #{pageTitle}
+
+        //begin contacts-cards
+        .contacts-cards
+          +contacts-card--simple('Образовательный центр')
+          +contacts-card--simple('Корпоративный отдел')
+          +contacts-card('Sangiovese Club',   '01', 'СПб. ул. Казанская д. 8-10')
+          +contacts-card('Pinot Grigio Club', '02', 'СПб. ул. Оренбургская д.2 (напротив БЦ "Петровский форт")')
+          +contacts-card('Pinot Noir Club',   '03', 'СПб. пр. Маршала Жукова 35/1 ТЦ Юго-Запад')
+          +contacts-card('Cabernet S Club',   '04', 'СПб. проспект Добролюбова, д. 3')
+
+        //end contacts-cards
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

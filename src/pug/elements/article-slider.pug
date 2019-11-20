@@ -1,0 +1,26 @@
+mixin article-slider__slide(img)
+  //begin .article-slider
+  .article-slider__slide
+    a(href="#").article-slide
+      .article-slide__img(style='background-image:url("assets/img/article-second-' + img + '.jpg");')
+        .article-slide__label
+          span Название раздела
+
+      .article-slide__date
+        +svg('calendar')
+        span 12 декабря 2018
+
+      h3.article-slide__title Название статьи в длинные две строки две строки
+  //end article-slider__slide
+
+//begin article-slider
+.article-slider
+  +article-slider__slide('01')
+  +article-slider__slide('02')
+  +article-slider__slide('03')
+  +article-slider__slide('04')
+  +article-slider__slide('01')
+  +article-slider__slide('02')
+  +article-slider__slide('03')
+  +article-slider__slide('04')
+//end article-slider

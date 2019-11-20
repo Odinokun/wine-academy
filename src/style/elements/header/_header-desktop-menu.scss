@@ -1,0 +1,156 @@
+.header__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+
+  @include max(1440) {
+    margin-right: 0;
+  }
+}
+
+.header-menu__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  @include max(1250) {
+    display: none !important;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.header-menu__item {
+  position: relative;
+  margin-right: 22px;
+  padding: 0 20px 0 0;
+  list-style: none;
+}
+
+.header-menu__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 15px;
+  height: 10px;
+  margin: auto;
+  cursor: pointer;
+
+  &.active {
+    pointer-events: none;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  svg {
+    fill: #1e1e1e;
+    width: 10px;
+    height: 5px;
+    transition: all .5s;
+  }
+}
+
+.header-menu__link {
+  font-family: $playfair;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.header-menu__sublist {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 5px);
+  left: 0;
+  display: none;
+  min-width: 270px;
+  margin: 0;
+  padding: 23px 45px 11px 20px;
+  background-color: #e6e6e6;
+
+  @include max(1250) {
+    top: calc(100% + 17px);
+  }
+  @include max(580) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    padding-top: 50px;
+  }
+}
+
+.header-menu__subitem {
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+
+  @include max(580) {
+    max-width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.header-menu__sublink {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color .5s;
+  text-decoration: none;
+  color: #1e1e1e;
+  &.active,
+  &:hover {
+    color: $brand;
+  }
+}
+
+.header-burger__wrap {
+  &.active {
+    pointer-events: none;
+  }
+}
+
+.header-burger {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+
+  @include max(1440) {
+    margin-left: 5px;
+  }
+}
+
+.header-menu__subitem--title {
+  display: none;
+
+  @include max(1250) {
+    display: block;
+  }
+  .header-menu__sublist {
+    position: static;
+    display: block;
+    padding: 10px 15px 1px 10px;
+  }
+}
+
+.header-menu__sublink--title {
+  font-family: $playfair;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #1e1e1e;
+}

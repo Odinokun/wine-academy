@@ -1,0 +1,100 @@
+extends ../_template
+
+mixin lk-history__order(title, tickets, price)
+  //begin lk-history__order
+  .lk-history__order
+    .lk-history__order-img(style="background-image:url('assets/img/history-order.jpg');")
+    .lk-history__order-body
+      h3.lk-history__order-title #{title}
+      span.lk-history__order-tickets #{tickets}
+
+      .lk-history__order-info-review
+        a(href="#").lk-history__order-info
+          span Заказ #0001
+          span от
+          span 03.07.2018
+        a(href="#").lk-history__order-review оставить отзыв
+
+    .lk-history__order-footer
+      .lk-history__order-price
+        span #{price}
+        span.rub c
+      .lk-history__order-finished
+        .lk-history__order-finished--title Завершено
+        .lk-history__order-finished--date 28.07.2018 19:00 -21:00
+
+  //end lk-history__order
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Преподаватели'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.lk
+      .container
+        include ../elements/breadcrumbs--dark
+        h1.page-title.page-title--dark Личный кабинет
+      .container
+        //begin lk-main
+        .lk-main
+          include ../elements/lk-aside
+
+          //begin lk-body
+          .lk-body
+            //begin lk-history
+            .lk-history
+              //begin lk-history__header
+              .lk-history__header
+                h2.lk-history__title История заказов
+                .lk-history__btns
+                  a(href="#").btn.btn--violet мероприятия
+                  a(href="#").btn.btn--violet заказы
+              //end lk-history__header
+
+              //begin lk-history__body
+              .lk-history__body
+                //begin lk-history__filters-row
+                .lk-history__filters-row
+                  form.lk-history__search
+                    input(type="search" placeholder='Поиск').lk-history__search-input
+                    .lk-history__search-btn
+                      input(type='submit')
+                      +svg('magnifier')
+                  form.lk-history__sort
+                    span.lk-history__sort-lable Сортировать по
+                    select.lk-history__select.select-ui
+                      option Дате
+                      option Времени дня
+                      option Цене
+                      option Уровню
+                      option Месту
+                      option Тегам
+                //end lk-history__filters-row
+
+                //begin lk-history__list
+                .lk-history__list
+                  +lk-history__order('Лекция-дегустация: Согревающие вина солнечной Испании', '4 билета', '13000')
+                  +lk-history__order('Вина Старого и Нового Света', '2 билета', '2600')
+                  +lk-history__order('Лекция-дегустация: Согревающие вина солнечной Испании', '4 билета', '13000')
+                //end lk-history__list
+
+                include ../elements/pagination
+
+              //end lk-history__body
+            //end lk-history
+          //end lk-body
+        //end lk-main
+
+      .container
+
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

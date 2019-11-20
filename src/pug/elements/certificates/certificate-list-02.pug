@@ -1,0 +1,45 @@
+//begin certificate-list-02
+.certificate-list.certificate-list--red
+  a(href="#" class='certificate-list__img' style='background-image:url("assets/img/certificate-list-02.jpg");')
+    .certificate-list__rait
+      .certificate-list__rait-stars.rait-stars.rait-stars--white.rait-stars--04
+        +rait-star
+        +rait-star
+        +rait-star
+        +rait-star
+        +rait-star
+      .certificate-list__rait-numb
+        span 15
+
+  .certificate-list__info
+    .certificate-list__header
+      .certificate-list__label
+        span Дегустация
+
+      .certificate-list__date
+        +svg('calendar')
+        span 12 декабря в 19:00
+
+    a(href="#").certificate-list__title Лекция-дегустация: Согревающие вина солнечной Испании
+    .certificate-list__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+
+    .certificate-list__footer
+      .certificate-list__footer-left
+        a(href="#").certificate-list__footer-adress
+          +svg('marker')
+          span СПб, пр. Добролюбова, д. 3
+        .certificate-list__footer-tags
+          a(href="#").certificate-list__hashtag #Красное вино
+          a(href="#").certificate-list__hashtag #Франция
+          a(href="#").certificate-list__hashtag #Божеле
+          a(href="#").certificate-list__hashtag #Красное вино
+
+      .certificate-list__footer-right
+        .certificate-list__footer-price
+          .certificate-list__new-price
+            | 13000
+            =' '
+            span c
+        .certificate-list__footer-btn
+          a(href="#").btn.btn--yellow купить билет
+//end certificate-list-02

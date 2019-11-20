@@ -1,0 +1,245 @@
+.article {
+  padding-bottom: 90px;
+  .page-title {
+    line-height: 1.3;
+    margin-bottom: 13px;
+  }
+}
+
+.article-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+  @include max(680) {
+    flex-direction: column;
+  }
+}
+
+.article-subtitle__tag {
+  font-family: $opensans;
+  font-size: 11px;
+  font-weight: 400;
+  display: inline-block;
+  margin: 10px;
+  padding: 4px 27px;
+  text-align: center;
+  color: #1e1e1e;
+  background-color: #fff;
+}
+
+.article-subtitle__author {
+  margin: 10px;
+}
+
+.article-subtitle__author-text {
+  font-family: $opensans;
+  font-weight: 300;
+  color: #969696;
+}
+
+.article-subtitle__author-name {
+  font-family: $opensans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+  padding-left: 5px;
+  color: #1e1e1e;
+}
+
+.article-subtitle__date {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  svg {
+    flex: none;
+    fill: #969696;
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+    margin-bottom: 2px;
+  }
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: #969696;
+  }
+}
+
+.article__wrap {
+  display: flex;
+  justify-content: space-between;
+
+    @include max(1023) {
+      flex-wrap: wrap;
+    }
+}
+
+.article__main {
+  transform: translateY(-5px);
+  flex: 1;
+
+    @include max(1023) {
+      flex: inherit;
+      width: 100%;
+    }
+
+  p {
+    font-family: $opensans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    display: block;
+    margin-bottom: 25px;
+    color: #646464;
+    strong {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1e1e1e;
+    }
+  }
+}
+
+.article-main__row {
+  padding-bottom: 12px;
+}
+
+.article-main__img {
+  float: left;
+  width: calc(50% - 15px);
+  margin-right: 30px;
+  @include max(580) {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.article-main__title-2 {
+  font-family: $opensans;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.article-main__title-3 {
+  font-family: $opensans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.article-main__ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  li {
+    font-family: $opensans;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    list-style-image: url('../img/ul.svg');
+    color: #646464;
+  }
+}
+
+.article-main__blockquote {
+  font-family: $opensans;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 26px;
+  display: block;
+  margin: 0 0 25px 0;
+  padding: 30px 25px 35px 60px;
+  color: #646464;
+  border-top: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+  background-image: url('../img/quote.svg');
+  background-repeat: no-repeat;
+  background-position: 0 35px;
+}
+
+.article-main__ol {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+
+  @include counter(li);
+  li {
+    padding: 0 0 5px 0;
+
+    color: #646464;
+    font-family: $opensans;
+    font-size: 14px;
+    font-weight: 400;
+
+
+  }
+
+  li::before {
+    font-family: $opensans;
+    color: #1e1e1e;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 17px;
+  }
+}
+
+.article-main__table{
+  border-top:2px solid #fff;
+  margin-bottom: 30px;
+
+}
+.article-main__table-row{
+  display: flex;
+  border-bottom:2px solid #fff;
+  @include max(680) {
+    flex-direction: column;
+  }
+}
+.article-main__table-item{
+  font-family: $opensans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 10px 10px 10px 0;
+&:first-child{
+  width: 270px;
+  flex: none;
+  color: #969696;
+  @include max(680) {
+    padding-bottom: 0;
+  }
+}
+  &:nth-child(2){
+    color: #1e1e1e;
+  }
+}
+
+.article-main__socials{
+  padding-top: 10px;
+  display: flex;
+  padding-bottom: 35px;
+}
+.article-main__social{
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-right: 5px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}

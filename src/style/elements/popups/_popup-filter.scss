@@ -1,0 +1,98 @@
+.popup-filter {
+  top: 50px;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px);
+  height: calc(100vh - 100px);
+  padding: 80px 50px;
+  transform: translate(0, 0);
+  background-color: #fff;
+  @include max(520) {
+    align-items: flex-start;
+  padding: 50px 25px;
+  }
+  @include max(425) {
+    width: calc(100% - 40px);
+    height: calc(100vh - 40px);
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.popup-filter__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1160px;
+  height: 100%;
+  background-color: #fff;
+  @include max(1200) {
+
+      justify-content: space-around;
+  }
+  @include max(680) {
+    justify-content: flex-start;
+  }
+  .popup-filter__col {
+    width: 25%;
+    @include max(1200) {
+      width: 50%;
+      max-width: 350px !important;
+    }
+    @include max(680) {
+      width: 100%;
+    }
+    &:nth-child(1) {
+      max-width: 250px;
+    }
+    &:nth-child(2) {
+      max-width: 260px;
+    }
+    &:nth-child(3) {
+      max-width: 260px;
+    }
+    &:nth-child(4) {
+      max-width: 290px;
+    }
+  }
+  .catalog-filter__item {
+    padding: 25px 15px;
+    background-color: #fff;
+    @include max(425) {
+      padding: 15px 0;
+    }
+  }
+  .catalog-filter__title {
+    pointer-events: none;
+    &::before {
+      display: none;
+    }
+  }
+  .catalog-filter__item-body {
+    display: block !important;
+  }
+
+  .filter-price__one,
+  .filter-price__two,
+  .filter-time__checkbox-label span::before,
+  .filter-skills__checkbox-label span::before,
+  .filter-date__checkbox-label span::before,
+  .filter-adress__checkbox-label .filter-adress__checkbox-adress::before,
+  .filter-date__datepicker {
+    background-color: #f5f5f5;
+  }
+}
+
+.popup-filter__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  .btn {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,124 @@
+.lk-reviews__header {
+  width: 100%;
+}
+
+.lk-reviews__title {
+  font-family: $opensans;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 25px;
+  padding-top: 5px;
+  color: #1e1e1e;
+}
+
+//begin TABLE
+.lk-reviews__body {
+  overflow: auto;
+  width: 100%;
+}
+
+.lk-reviews__table {
+  display: block;
+  min-width: 550px;
+}
+
+.lk-reviews__table-row {
+  display: flex;
+  padding: 17px 0;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.lk-reviews__table-row--header {
+  padding: 15px 0;
+  border-bottom: 2px solid #1e1e1e;
+
+  .lk-reviews__table-td {
+    span {
+      font-family: $opensans;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1e1e1e;
+    }
+  }
+}
+
+.lk-reviews__table-td {
+  flex: 1;
+  padding-right: 15px;
+  &:last-child {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    width: 110px;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}
+
+.lk-reviews__table-td-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+  span {
+    font-family: $opensans;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    color: #1e1e1e;
+  }
+  a {
+    font-family: $opensans;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    color: $brand;
+  }
+}
+
+.lk-reviews__table-td-body {
+  max-width: 600px;
+  padding-bottom: 7px;
+  span {
+    font-family: $opensans;
+    font-size: 13px;
+    font-weight: 400;
+    color: #969696;
+  }
+}
+
+.lk-reviews__table-td--published {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #7a8ed0;
+}
+
+.lk-reviews__table-td--change {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #646464;
+  &:hover {
+    color: #e8c24f;
+  }
+}
+
+.lk-reviews__table-td--moderation {
+  font-family: $opensans;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #c85d5d;
+}
+
+//end TABLE

@@ -1,0 +1,28 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Утренний курс школы'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.event
+      include ../sections/event-top
+      include ../sections/event-about
+      include ../sections/course-know
+      include ../sections/event-testing
+      include ../sections/teachers-slider
+      include ../sections/event-certificate
+      include ../sections/course-reviews
+      include ../sections/course-postrelise
+      include ../sections/course-tab-sec
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    include ../sections/scripts

@@ -1,0 +1,111 @@
+mixin footer-menu__item(text)
+  li.footer-menu__item
+    a(href="#").footer-menu__link #{text}
+
+mixin footer-adress__item(text)
+  li.footer-adress__item
+    a(href="#").footer-adress__link
+      svg
+        use(xlink:href="assets/img/sprite.svg#marker")
+      | #{text}
+
+//begin footer
+footer.footer
+  //begin footer__main
+  .footer__main.footer-main
+    //begin footer__items
+    .footer__items.footer-items
+      .container
+        //begin footer-items__menu
+        .footer-items__menu.footer-menu
+          //begin footer-menu__block
+          .footer-menu__block
+            h3.footer-menu__title Академия вина
+            ul.footer-menu__list
+              +footer-menu__item ('О нас')
+              +footer-menu__item ('Новости')
+              +footer-menu__item ('Контакты')
+              +footer-menu__item ('Вакансии')
+          //end footer-menu__block
+
+          //begin footer-menu__block
+          .footer-menu__block
+            h3.footer-menu__title Мероприятия
+            ul.footer-menu__list
+              +footer-menu__item ('Дегустации')
+              +footer-menu__item ('Мастер-классы')
+              +footer-menu__item ('Ужины')
+              +footer-menu__item ('Все')
+          //end footer-menu__block
+
+          //begin footer-menu__block
+          .footer-menu__block
+            h3.footer-menu__title Обучение
+            ul.footer-menu__list
+              +footer-menu__item ('Школа сомелье')
+              +footer-menu__item ('Школа WSET')
+          //end footer-menu__block
+        //end footer-items__menu
+
+        //begin footer-middle__item
+        .footer-middle__item.footer-middle
+          a(href="#").btn.btn--violet для себя
+          a(href="#").btn.btn--violet для бизнеса
+          //begin footer-middle__socials
+          .footer-middle__socials
+            a(href="#").footer-middle__social.footer-middle__social--youtube
+              +svg('youtube')
+            a(href="#").footer-middle__social.footer-middle__social--fb
+              +svg('fb')
+            a(href="#").footer-middle__social.footer-middle__social--vk
+              +svg('vk')
+            a(href="#").footer-middle__social.footer-middle__social--inst
+              +svg('inst')
+          //end footer-middle__socials
+        //end footer-middle__item
+
+        //begin footer-items__adress
+        .footer-items__adress.footer-adress
+          h3.footer-adress__title Дегустационные залы
+          ul.footer-adress__list
+            +footer-adress__item('Образовательный центр, СПб, пр. Добролюбова, 3')
+            +footer-adress__item('СПб, ул. Оренбургская, 2')
+            +footer-adress__item('СПб, пр. Маршала Жукова, 35/1, ТЦ "Юго-запад"')
+            +footer-adress__item('СПб, ул. Казанская, 8-10')
+        //end footer-items__adress
+    //end footer__items
+
+    //begin footer__about
+    .footer__about.footer-about
+      .container
+        //begin footer-about__info
+        .footer-about__info
+          span.footer-about__copyright &#169; 2006 - 2018. Академия вина - образовательный центр
+          a(href="https://goo.gl/maps/wLhWnJQbvuCm6XzX9" target="_blank" rel="nofollow noopener noreferrer").footer-about__adress Юр. адрес: 192236 г. Санкт-Петербург, Софийская улица дом 6 корп 8 стр 1 пом 1-Н оф 398
+        //end footer-about__info
+
+        //begin footer-about__pay
+        .footer-about__pay
+          span.footer-about__pay-text Мы принимаем к оплате
+          .footer-about__pay-icon.footer-about__pay-icon--visa
+            img(src="assets/img/footer-visa.png" alt="visa")
+          .footer-about__pay-icon.footer-about__pay-icon--mastercard
+            img(src="assets/img/footer-mastercard.png" alt="mastercard")
+          .footer-about__pay-icon.footer-about__pay-icon--world
+            img(src="assets/img/footer-world.png" alt="world")
+        //end footer-about__pay
+
+        //begin footer-about__links
+        .footer-about__links
+          a(href="#").footer-about__link Обработка персональных данных
+          a(href="#").footer-about__link Правила и условия
+        //end footer-about__links
+    //end footer__about
+  //end footer__main
+
+  //begin footer__ahtung
+  .footer__ahtung
+    .container
+      span.footer__ahtung-text Чрезмерное употребление алкоголя вредит вашему здоровью. Сайт рассчитан на посетителей старше 18 лет. Продажа алкогольной продукции на сайте не осуществляется.
+  //end footer__ahtung
+//end footer

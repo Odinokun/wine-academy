@@ -1,0 +1,73 @@
+extends ../_template
+
+block variables
+  - var title       = 'Академия вина'
+  - var description = 'Все о винной культуре'
+  - var ogtitle     = 'Академия вина'
+  - var pageTitle   = 'Сертификат на посещение эногастрономического ужина'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header--login
+
+    //begin content
+    main.main.butik
+
+      include ../sections/butik-slider
+      include ../sections/butik-map
+
+      //begin butik-events
+      .butik-events
+        .container
+          h1.page-title.page-title--dark Ближайшие мероприятия
+
+          //begin certificate-slider
+        .certificate-slider
+          .container
+            .certificate-slider__list
+              include ../elements/certificates/certificate-09
+              include ../elements/certificates/certificate-10
+              include ../elements/certificates/certificate-11
+              include ../elements/certificates/certificate-12
+              include ../elements/certificates/certificate-10
+              include ../elements/certificates/certificate-11
+          //end certificate-slider
+
+          .certificate-slider__all-link
+            a(href="#")
+              span все мероприятия
+              +svg('arrow')
+      //end butik-events
+    //end content
+
+    include ../sections/mailing
+    include ../sections/footer
+    // это ключ Google-API без ограничений - удалить перед продакшеном
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOCsBWLmb8s4eo6cltyZG2HRu99sG3RnE")
+
+    include ../sections/scripts
+    script.
+      var isDraggable = $(document).width() > 700 ? true : false;
+      //указываем центр карты в зависимости от разрешения
+      var coords = $(document).width() > 767 ? {lat: 59.932637, lng: 30.27} : {lat: 59.922637, lng: 30.322138};
+      function initialize() {
+        var mapDiv = document.getElementById("butik-map");
+        map = new google.maps.Map(mapDiv, {
+          zoom: 13,
+          disableDefaultUI: false,
+          scrollwheel: false,
+          draggable: isDraggable,
+          center: coords,
+          styles: [{"featureType": "road","stylers": [{"hue": "#5e00ff"},{"saturation": -79}]},{"featureType": "poi","stylers": [{"saturation": -78},{"hue": "#6600ff"},{"lightness": -47},{"visibility": "off"}]},{"featureType": "road.local","stylers": [{"lightness": 22}]},{"featureType": "landscape","stylers": [{"hue": "#6600ff"},{"saturation": -11}]},{},{},{"featureType": "water","stylers": [{"saturation": -65},{"hue": "#1900ff"},{"lightness": 8}]},{"featureType": "road.local","stylers": [{"weight": 1.3},{"lightness": 30}]},{"featureType": "transit","stylers": [{"visibility": "simplified"},{"hue": "#5e00ff"},{"saturation": -16}]},{"featureType": "transit.line","stylers": [{"saturation": -72}]}, {}]
+        });
+        var marker = new google.maps.Marker({
+          // Определяем позицию маркера
+          position: {lat: 59.932637, lng: 30.322138},
+          // Указываем на какой карте он должен появится.
+          map: map,
+          // Укажем свою иконку для маркера
+          icon: "assets/img/marker.png"
+        });
+      }
+      google.maps.event.addDomListener(window, "load", initialize);
+

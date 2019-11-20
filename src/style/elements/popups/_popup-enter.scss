@@ -1,0 +1,32 @@
+.popup-enter {
+  width: 95%;
+  max-width: 570px;
+  padding: 65px 35px 80px 35px;
+  .popup__close {
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.popup-enter__header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 295px;
+  margin: 0 auto;
+  .popup-title {
+    display: block;
+    cursor: pointer;
+    transition: color .5s;
+    color: #969696;
+    &.active {
+      pointer-events: none;
+      color: #1e1e1e;
+    }
+  }
+}

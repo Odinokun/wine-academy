@@ -1,0 +1,38 @@
+.banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 530px;
+  width: 270px;
+  flex: none;
+  padding: 25px;
+  text-align: center;
+  background-color: #000;
+
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .btn {
+    font-size: 15px;
+    min-width: 130px;
+    margin-bottom: 85px;
+  }
+}
+
+.banner__title {
+  font-family: $playfair;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.banner__descr {
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 45px;
+  color: #fff;
+}

@@ -1,0 +1,20 @@
+//begin header__user
+.header__user.header-user
+  .header-user__card.dropdown-wrap
+    .header-user__row.dropdown-arr
+      .header-user__icon
+        +svg('user')
+      span.header-user__name Fantomas
+      //-span.header-user__name Вход
+      .header-user__arr
+        +svg('arr-down')
+    //begin header-user__list
+    ul.header-user__list.dropdown-list
+      li.header-user__item
+        a(href="#").header-user__link Редактировать профиль
+      li.header-user__item
+        a(href="#").header-user__link Избранное
+      li.header-user__item
+        a(href="#").header-user__link Выход
+    //end header-user__list
+//end header__user

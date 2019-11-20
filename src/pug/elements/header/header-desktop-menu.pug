@@ -1,0 +1,75 @@
+//begin header__menu
+.header__menu.header-menu
+  //include ../burger-open
+
+
+  ul.header-menu__list
+    //begin header-menu__item
+    li.header-menu__item.dropdown-wrap
+      a(href="#").header-menu__link Для себя
+      .header-menu__arrow.dropdown-arr
+        +svg('arr-down')
+      ul.header-menu__sublist.dropdown-list
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Дегустации
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink.active Эногастрономические ужины
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Мастер-классы
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Обучение в школе сомелье
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Профессиональный блок
+    //end header-menu__item
+    //begin header-menu__item
+    li.header-menu__item.dropdown-wrap
+      a(href="#").header-menu__link Для бизнеса
+      .header-menu__arrow.dropdown-arr
+        +svg('arr-down')
+      ul.header-menu__sublist.dropdown-list
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Дегустации
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Эногастрономические ужины
+        li.header-menu__subitem
+          a(href="#").header-menu__sublink Мастер-классы
+    //end header-menu__item
+
+  .header-burger.dropdown-wrap
+    include ../burger-close
+    .header-burger__wrap.dropdown-arr
+      include ../burger-open
+
+    ul.header-menu__sublist.dropdown-list
+      //begin mobile menu items
+      li.header-menu__subitem.header-menu__subitem--title
+        a(href="#").header-menu__sublink.header-menu__sublink--title Для себя
+        ul.header-menu__sublist
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Дегустации
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink.active Эногастрономические ужины
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Мастер-классы
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Обучение в школе сомелье
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Профессиональный блок
+      li.header-menu__subitem.header-menu__subitem--title
+        a(href="#").header-menu__sublink.header-menu__sublink--title Для бизнеса
+        ul.header-menu__sublist
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Дегустации
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Эногастрономические ужины
+          li.header-menu__subitem
+            a(href="#").header-menu__sublink Мастер-классы
+      //end mobile menu items
+      li.header-menu__subitem
+        a(href="#").header-menu__sublink Эногастрономические ужины
+      li.header-menu__subitem
+        a(href="#").header-menu__sublink Мастер-классы
+      li.header-menu__subitem
+        a(href="#").header-menu__sublink Обучение в школе сомелье
+
+//end header__menu
