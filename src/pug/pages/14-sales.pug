@@ -24,7 +24,7 @@ block content
         .sale-cards__filter-list.filter-list
           include ../elements/sale-cards/sale-card-01
           include ../elements/sale-cards/sale-card-02
-          include ../elements/sale-cards/sale-card-03
+          include ../elements/sale-cards/sale-card-counter
           include ../elements/sale-cards/sale-card-01
           include ../elements/sale-cards/sale-card-02
           include ../elements/sale-cards/sale-card-03
@@ -40,3 +40,31 @@ block content
     include ../sections/mailing
     include ../sections/footer
     include ../sections/scripts
+    script.
+      function Countdown() {
+        const counter = document.getElementById('counter'),
+          second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+        let countDown = new Date('Dec 31, 2019 13:20:00').getTime(),
+          x = setInterval(function () {
+            if (counter) {
+              let now = new Date().getTime(),
+                distance = countDown - now;
+              // added zero before date ('0' + currentDate.getHours()).slice(-2)
+              document.getElementById('counter__days').innerText = ('0' + Math.floor(distance / (day))).slice(-2);
+              document.getElementById('counter__hours').innerText = ('0' + Math.floor((distance % (day)) / (hour))).slice(-2);
+              document.getElementById('counter__minutes').innerText = ('0' + Math.floor((distance % (hour)) / (minute))).slice(-2);
+              document.getElementById('counter__seconds').innerText = ('0' + Math.floor((distance % (minute)) / second)).slice(-2);
+              //do something later when date is reached
+              if (distance < 0) {
+                document.getElementById('counter__days').innerText = '00';
+                document.getElementById('counter__hours').innerText = '00';
+                document.getElementById('counter__minutes').innerText = '00';
+                document.getElementById('counter__seconds').innerText = '00';
+              }
+            }
+          }, second);
+      }
+      Countdown();

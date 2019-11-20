@@ -42,3 +42,12 @@
   padding: 0 20px;
   color: #1e1e1e;
 }
+.sale-card__date--counter{
+  svg {
+    fill: #bb2e27;
+  }
+  span {
+    color: #bb2e27;
+    padding-right: 3px;
+  }
+}
