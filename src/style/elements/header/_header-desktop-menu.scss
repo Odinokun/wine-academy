@@ -69,7 +69,7 @@
 .header-menu__sublist {
   position: absolute;
   z-index: 1;
-  top: calc(100% + 5px);
+  top: calc(100% + 29px);
   left: 0;
   display: none;
   min-width: 270px;
@@ -77,9 +77,6 @@
   padding: 23px 45px 11px 20px;
   background-color: #e6e6e6;
 
-  @include max(1250) {
-    top: calc(100% + 17px);
-  }
   @include max(580) {
     position: fixed;
     top: 0;
@@ -139,6 +136,7 @@
   @include max(1250) {
     display: block;
   }
+
   .header-menu__sublist {
     position: static;
     display: block;

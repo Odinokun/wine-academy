@@ -1,5 +1,9 @@
 .burger--open {
   cursor: pointer;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   svg {
     fill: $brand;

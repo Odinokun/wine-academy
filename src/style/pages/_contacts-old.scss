@@ -6,26 +6,8 @@
   padding-top: 30px;
 
   @include max(1023) {
-    //    padding-top: 10px;
+    padding-top: 10px;
   }
-}
-
-.contacts-cards__left,
-.contacts-cards__right {
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - 15px);
-
-  @include max(1023) {
-    width: 100%;
-  }
-}
-
-.contacts-cards__bottom {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .contacts-card {
@@ -34,7 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc(33.33% - 20px);
+  width: calc(50% - 15px);
+  min-height: 250px;
   margin-bottom: 30px;
   padding: 30px;
   text-align: center;
@@ -43,14 +26,12 @@
   background-position: 50% 50%;
   background-size: cover;
 
-  @include max(1023) {
+  @include max(767) {
     width: 100%;
   }
 }
 
 .contacts-card--simple {
-  width: 100%;
-  min-height: 250px;
   .contacts-card__title {
     color: #1e1e1e;
   }
@@ -64,66 +45,6 @@
   }
   .contacts-card__schedule {
     color: #969696;
-  }
-}
-
-.contacts-card--lg {
-  justify-content: flex-end;
-  width: 100%;
-  height: 100%;
-
-  @include max(1023) {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  &::before {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 70px;
-    height: 70px;
-    content: '';
-    background-image: url('../img/label-best.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-
-    @include max(680) {
-      top: 15px;
-      right: 15px;
-      width: 60px;
-      height: 60px;
-    }
-  }
-
-  .contacts-card__subtitle {
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 10px;
-    letter-spacing: 4px;
-
-    @include max(1023) {
-      font-size: 16px;
-    }
-    @include max(425) {
-      font-size: 14px;
-    }
-  }
-  .contacts-card__title {
-    font-size: 50px;
-    line-height: 1;
-    margin-bottom: 90px;
-
-    @include max(1100) {
-      font-size: 47px;
-    }
-    @include max(1023) {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-    @include max(425) {
-      font-size: 28px;
-    }
   }
 }
 
@@ -197,7 +118,6 @@
   font-weight: 400;
   line-height: 20px;
   display: block;
-  margin-bottom: 10px;
   color: #fff;
 }
 

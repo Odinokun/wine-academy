@@ -13,6 +13,24 @@ mixin contacts-card--simple(title)
     span.contacts-card__schedule ежедневно с 10:00 до 22:00
   //end contacts-card
 
+mixin contacts-card--lg(title, bg, adress)
+  //begin contacts-card
+  div(class='contacts-card contacts-card--lg' style='background-image:url("assets/img/contacts-card-' + bg + '.jpg")')
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-card__link
+    h4.contacts-card__subtitle винный бутик
+    h3.contacts-card__title #{title}
+    .contacts-card__phone
+      +svg('phone')
+      a(href="tel:+88126776666")
+        | 8 (812)
+        =' '
+        b 677 66 66
+    span.contacts-card__schedule ежедневно с 10:00 до 22:00
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-card__adress
+      +svg('marker')
+      span #{adress}
+  //end contacts-card
+
 mixin contacts-card(title, bg, adress)
   //begin contacts-card
   div(class='contacts-card' style='background-image:url("assets/img/contacts-card-' + bg + '.jpg")')
@@ -49,12 +67,15 @@ block content
 
         //begin contacts-cards
         .contacts-cards
-          +contacts-card--simple('Образовательный центр')
-          +contacts-card--simple('Корпоративный отдел')
-          +contacts-card('Sangiovese Club',   '01', 'СПб. ул. Казанская д. 8-10')
-          +contacts-card('Pinot Grigio Club', '02', 'СПб. ул. Оренбургская д.2 (напротив БЦ "Петровский форт")')
-          +contacts-card('Pinot Noir Club',   '03', 'СПб. пр. Маршала Жукова 35/1 ТЦ Юго-Запад')
-          +contacts-card('Cabernet S Club',   '04', 'СПб. проспект Добролюбова, д. 3')
+          .contacts-cards__left
+            +contacts-card--simple('Образовательный центр')
+            +contacts-card--simple('Корпоративный отдел')
+          .contacts-cards__right
+            +contacts-card--lg('Cabernet S Club',   '04', 'СПб. проспект Добролюбова, д. 3')
+          .contacts-cards__bottom
+            +contacts-card('Sangiovese Club',   '01', 'СПб. ул. Казанская д. 8-10')
+            +contacts-card('Pinot Grigio Club', '02', 'СПб. ул. Оренбургская д.2')
+            +contacts-card('Pinot Noir Club',   '03', 'СПб. пр. Маршала Жукова 35/1 ТЦ Юго-Запад')
 
         //end contacts-cards
     //end content

@@ -62,13 +62,17 @@
 
 .header-contacts__cities-list {
   position: absolute;
-  top: calc(100% + 5px);
+  top: calc(100% + 15px);
   right: 0;
   display: none;
   min-width: 200px;
   margin: 0;
   padding: 23px 45px 11px 20px;
   background-color: #e6e6e6;
+  @include max(1250) {
+  top: calc(100% + 18px);
+
+  }
 }
 
 .header-contacts__cities-item {
