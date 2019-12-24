@@ -1,0 +1,63 @@
+.popup-basket {
+  width: 95%;
+  max-width: 1170px;
+  padding: 65px 35px 65px 35px;
+  .popup__close {
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .basket-event__item--sum {
+    justify-content: flex-end;
+    width: 130px;
+  }
+
+  .basket-events__table-footer {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+  .basket-events__table-footer-sum {
+    margin-left: auto;
+  }
+}
+
+.popup-basket__header {
+  display: flex;
+  justify-content: center;
+  max-width: 295px;
+  margin: 0 auto;
+  .popup-title {
+    display: block;
+    pointer-events: none;
+    color: #1e1e1e;
+  }
+}
+
+.popup-basket__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include max(425) {
+    flex-direction: column;
+  }
+  .btn {
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 160px;
+    margin-right: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #1e1e1e;
+
+    @include max(425) {
+      margin: 0 auto 15px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.popup-success {
+  width: 95%;
+  max-width: 570px;
+  padding: 65px 35px 64px 35px;
+  .popup__close {
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .certificate {
+    max-width: 270px;
+    margin: 0 auto 30px;
+    padding-bottom: 0;
+  }
+  .certificate__img {
+    margin-bottom: 0;
+  }
+}
+
+.popup-success__title {
+  font-family: $opensans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  max-width: 330px;
+  margin: 0 auto 35px;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.popup-success__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 160px;
+    margin-right: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #1e1e1e;
+  }
+  a {
+    text-align: center;
+  }
+}

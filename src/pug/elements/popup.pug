@@ -189,7 +189,6 @@
   //end popup-registration
 //end popup-enter
 
-
 //begin popup-filter
 .popup.popup-filter#popup-filter
   .popup__close
@@ -389,7 +388,145 @@
       input(type='submit' value='применить').btn.btn--yellow
       a(href="#").filter-all__reset сбросить
     //end popup-filter__footer
-
 //end popup-filter
+
+//begin popup-success
+.popup.popup-success#popup-success
+  .popup__close
+    +svg('close')
+
+  //begin certificate
+  .certificate.certificate--new
+    a(href="#" class='certificate__img' style='background-image:url("assets/img/certificate-02.jpg");')
+      .certificate__view
+        +svg('grape')
+        span 6 лекций
+
+      .certificate__rait
+        .certificate__rait-stars.rait-stars.rait-stars--white.rait-stars--04
+          +rait-star
+          +rait-star
+          +rait-star
+          +rait-star
+          +rait-star
+        .certificate__rait-numb
+          span 15
+  //end certificate
+
+  h3.popup-success__title Лекция-дегустация на тему: Согревающие вина солнечной Испании успешно добавлена в корзину!
+
+  .popup-success__btns
+    a(href="#").btn.btn--yellow оформить заказ
+    a(href="#") продолжить покупки
+//end popup-success
+
+//begin popup-basket
+.popup.popup-basket#popup-basket
+  .popup__close
+    +svg('close')
+
+  .popup-basket__header
+    h3.popup-title Ваша корзина
+
+  //begin basket-events
+  .basket-events
+    //begin basket-event__table
+    .basket-event__table
+      //begin basket-event__row
+      .basket-event__row.basket-event__row--header
+        .basket-event__item.basket-event__item--event
+          span Мероприятие
+        .basket-event__item.basket-event__item--price
+          span Цена
+        .basket-event__item.basket-event__item--tickets
+          span Кол-во
+        .basket-event__item.basket-event__item--sum
+          span Сумма
+      //end basket-event__row
+
+      //begin basket-event__row
+      .basket-event__row
+        .basket-event__item.basket-event__item--event
+          .basket-event__item-info
+            .basket-event__item-info-header
+              .basket-event__label.basket-event__label--blue
+                span Обучение: курс
+              .basket-event__view
+                +svg('grape')
+                span Профессия: Сомелье
+            h3.basket-event__item-info-title Лекция-дегустация на тему: Согревающие вина солнечной Испании
+            .basket-event__item-info-footer
+              .basket-event__date
+                +svg('calendar')
+                span 12 декабря в 19:00
+              a(href="#" target="_blank" rel="noreferrer").basket-event__adress
+                +svg('marker')
+                span СПб, пр. Добролюбова, д. 3
+
+        .basket-event__item.basket-event__item--price
+          .basket-event__item-price
+            span 55 000
+            span.rub c
+
+        .basket-event__item.basket-event__item--tickets
+          .basket-event__item-tickets
+            button.basket-event__down-count &#8211;
+            input.basket-event__counter(value='1')
+            button.basket-event__up-count +
+
+        .basket-event__item.basket-event__item--sum
+          .basket-event__item-sum
+            span 165 000
+            span.rub c
+      //end basket-event__row
+
+      //begin basket-event__row
+      .basket-event__row
+        .basket-event__item.basket-event__item--event
+          .basket-event__item-info
+            .basket-event__item-info-header
+              .basket-event__label.basket-event__label--red
+                span Дегустация
+            h3.basket-event__item-info-title Лекция-дегустация на тему: Согревающие вина солнечной Испании
+            .basket-event__item-info-footer
+              .basket-event__date
+                +svg('calendar')
+                span 12 декабря в 19:00
+              a(href="#" target="_blank" rel="noreferrer").basket-event__adress
+                +svg('marker')
+                span СПб, пр. Добролюбова, д. 3
+
+        .basket-event__item.basket-event__item--price
+          .basket-event__item-price
+            span 5 000
+            span.rub c
+
+        .basket-event__item.basket-event__item--tickets
+          .basket-event__item-tickets
+            button.basket-event__down-count &#8211;
+            input.basket-event__counter(value='1')
+            button.basket-event__up-count +
+
+        .basket-event__item.basket-event__item--sum
+          .basket-event__item-sum
+            span 5 000
+            span.rub c
+      //end basket-event__row
+    //end basket-event__table
+  //end basket-events
+
+  //begin basket-events__table-footer
+  .basket-events__table-footer
+    .basket-events__table-footer-sum
+      span.basket-events__table-footer-sum-text Итого:
+      span.basket-events__table-footer-sum-price 170 000
+      span.rub c
+  //end basket-events__table-footer
+
+  .popup-basket__btns
+    a(href="#").btn.btn--yellow оформить заказ
+    a(href="#") перейти в корзину
+
+//end popup-basket
 
 //end popups
